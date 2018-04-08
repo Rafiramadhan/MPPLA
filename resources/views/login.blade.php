@@ -99,7 +99,7 @@
                     <input class="form-control" id="password" type="password" name="password" placeholder="Password"/>
                   </div>
                   <div class="form-group">
-                    <a href="index_administrator.php" class="btn btn-round btn-b">Login</a>
+                    <a href="index_administrator.blade.php" class="btn btn-round btn-b">Login</a>
                   </div>
                   <div class="form-group"><a href="">lupa Password?</a></div>
                 </form>

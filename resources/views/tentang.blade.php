@@ -88,48 +88,21 @@
                 </div>
             </div>
         </section>
-        <section class="module">
+        <section class="module" style="margin-bottom: -10em;">
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h2 class="font-alt">Sempat Jatuh Bangun Hingga Akhirnya Sukses </h2><br/>
-                        <h3>Bakpao adalah makanan yang berasal dari negeri China, berbahan dasar tepung terigu yang
+                <div class="row" style="margin-top: -8em;">
+                    <div class="text-center">
+                        <p class="font-alt module-title">Sempat Jatuh Bangun Hingga Akhirnya Sukses </p><br/>
+                        <p style="margin-top: -5em;">Bakpao adalah makanan yang berasal dari negeri China, berbahan dasar tepung terigu yang
                             diberi ragi sehingga mengembang, kemudian diberi aneka isian dan dikukus.Bak berarti daging,
                             sedang pao sendiri berarti bungkusan. Jadi, bakpao berarti “bungkusan-daging”. Di negeri
                             panda, bakpao dikenal dengan sebutan BaoZi. Harga yang murah serta varian isi yang beragam
-                            membuat bakpao banyak digemari sebagai cemilan ataupun makanan penunda lapar.</h3>
-                        <h3>Salah satu bisnis bakpao yang tergolong sukses serta membuka cukup banyak lapangan pekerjaan
+                            membuat bakpao banyak digemari sebagai cemilan ataupun makanan penunda lapar.</p>
+                        <p>Salah satu bisnis bakpao yang tergolong sukses serta membuka cukup banyak lapangan pekerjaan
                             adalah bakpao “Mega Jaya”. Hadir sejak tahun 1995 dengan nama “lien” sebelum kemudian sempat
                             terhenti karena tragedi 1998 dan berganti nama menjadi “Mega Jaya”. Adalah pak Sahir, bapak
                             dari 5 anak ini hanya mengemban pendidikan hingga SD, itupun tidak sempat lulus. Pak Sahir
-                            kini menikmati hasil dari kerja kerasnya dalam usaha bakpao ini.</h3>
-                    </div>
-                    <div class="col-sm-6">
-                        <h3 class="font-alt"><span class="icon-tools-2"></span> Development
-                        </h3>
-                        <div class="progress">
-                            <div class="progress-bar pb-dark" aria-valuenow="60" role="progressbar" aria-valuemin="0"
-                                 aria-valuemax="100"><span class="font-alt"></span></div>
-                        </div>
-                        <h3 class="font-alt"><span class="icon-strategy"></span> Branding
-                        </h3>
-                        <div class="progress">
-                            <div class="progress-bar pb-dark" aria-valuenow="80" role="progressbar" aria-valuemin="0"
-                                 aria-valuemax="100"><span class="font-alt"></span></div>
-                        </div>
-                        <h3 class="font-alt"><span class="icon-target"></span> Marketing
-                        </h3>
-                        <div class="progress">
-                            <div class="progress-bar pb-dark" aria-valuenow="50" role="progressbar" aria-valuemin="0"
-                                 aria-valuemax="100"><span class="font-alt"></span></div>
-                        </div>
-                        <!--
-                        <h6 class="font-alt"><span class="icon-camera"></span> Photography
-                        </h6>
-                        <div class="progress">
-                          <div class="progress-bar pb-dark" aria-valuenow="90" role="progressbar" aria-valuemin="0" aria-valuemax="100"><span class="font-alt"></span></div>
-                        </div>
-                      -->
+                            kini menikmati hasil dari kerja kerasnya dalam usaha bakpao ini.</p>
                     </div>
                 </div>
             </div>
@@ -138,7 +111,7 @@
         <section class="module" id="team">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3">
+                    <div class="col-sm-6 col-sm-offset-3" style="margin-top: -8em;">
                         <h2 class="module-title font-alt">Pendiri Dan Tim</h2>
                         <div class="module-subtitle font-serif">Orang-orang yang pantang menyerah.</div>
                     </div>
@@ -159,7 +132,7 @@
                             <div class="team-image"><img src="assets/images/abyan.jpg" alt="Member Photo"/>
                                 <div class="team-descr font-alt">
                                     <div class="team-name">Abyan Dafa</div>
-                                    <div class="team-role">System Analyst</div>
+                                    <div class="team-role">System Analyst, Programmer, Tester</div>
                                 </div>
                             </div>
                         </div>
@@ -170,7 +143,7 @@
                             </div>
                             <div class="team-descr font-alt">
                                 <div class="team-name">Ivan Fadhila</div>
-                                <div class="team-role">Project Manager</div>
+                                <div class="team-role">Project Manager, Programmer, Documentator</div>
                             </div>
                         </div>
                     </div>
@@ -180,7 +153,7 @@
                             </div>
                             <div class="team-descr font-alt">
                                 <div class="team-name">Rafi R. Ramadhan</div>
-                                <div class="team-role">Humas</div>
+                                <div class="team-role">Designer, Programmer, Tester</div>
                             </div>
                         </div>
                     </div>

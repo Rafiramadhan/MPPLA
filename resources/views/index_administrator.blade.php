@@ -428,7 +428,7 @@
                                         </form>
                                         <hr class="divider-w mt-10 mb-20">
                             <p class="btn-list">
-                                <a href="index_administrator.php" class="btn btn-g btn-round"
+                                <a href="index_administrator.blade.php" class="btn btn-g btn-round"
                                    type="submit">Tambahkan</a>&nbsp;
                         </div>
 

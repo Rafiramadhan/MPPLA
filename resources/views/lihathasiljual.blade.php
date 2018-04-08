@@ -68,7 +68,7 @@
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
                <li><a href="#totop">Home</a></li>
-                <li><a href="index_administrator.php">Halaman Admin</a></li>
+                <li><a href="index_administrator.blade.php">Halaman Admin</a></li>
                 <li><a href="index.php">Keluar</a></li>
             </ul>
           </div>

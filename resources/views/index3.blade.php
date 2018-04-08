@@ -73,7 +73,7 @@
               <li><a href="#totop">Beranda</a></li>
               <li><a class="section-scroll" href="#services">Pelayanan</a></li>
               <li><a class="section-scroll" href="#products">Produk</a></li>
-              <li><a href="index_administrator.php">Halaman Admin</a></li>
+              <li><a href="index_administrator.blade.php">Halaman Admin</a></li>
               <li><a href="index.php">Keluar</a></li>
             </ul>
           </div>
