@@ -28,3 +28,7 @@ Route::get('/login','HomeController@getLogin');
 Route::get('/pemesanan','HomeController@getPemesanan');
 Route::get('/penjualan','HomeController@getPenjualan');
 Route::get('tentang','HomeController@getTentang');
+
+
+Route::post('tes/tambahkritik','KritiksaranController@addKritik');
+Route::post('tes/liatkritik','KritiksaranController@showKritik');
