@@ -42,18 +42,18 @@
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span
                             class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
                             class="icon-bar"></span><span class="icon-bar"></span></button>
-                <a class="navbar-brand" href="index2.php">Mega Jaya</a>
+                <a class="navbar-brand" href="/index2">Mega Jaya</a>
             </div>
             <div class="collapse navbar-collapse" id="custom-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index_penjual.php">Beranda</a></li>
-                    <li><a href="pemesanan.php">Pemesanan</a></li>
+                    <li><a href="/indexpenjual">Beranda</a></li>
+                    <li><a href="/pemesanan">Pemesanan</a></li>
                     <li><a class="section-scroll" href="#produksi">Produk Kami</a></li>
-                    <li><a href="penjualan.php">Penjualan</a></li>
+                    <li><a href="/penjualan">Penjualan</a></li>
                     <li><a class="section-scroll" href="#Ketersediaan">Ketersediaan</a></li>
                     <li><a class="section-scroll" href="#riwayat">Riwayat Transaksi</a></li>
-                    <li><a href="kritiksaran.php">kritikSaran</a></li>
-                    <li><a href="index.php">Keluar</a></li>
+                    <li><a href="/kritiksaran">kritikSaran</a></li>
+                    <li><a href="/">Keluar</a></li>
                 </ul>
             </div>
         </div>
@@ -173,7 +173,7 @@
                     </div>
                 </div>
                 <div class="row mt-30">
-                    <div class="col-sm-12 align-center"><a class="btn btn-b btn-round" href="shop_checkout.html">Pemesanan</a>
+                    <div class="col-sm-12 align-center"><a class="btn btn-b btn-round" href="/pemesanan">Pemesanan</a>
                     </div>
                 </div>
             </div>
@@ -191,19 +191,14 @@
                         <table class="table table-striped table-border checkout-table">
                             <tbody>
                             <tr>
-
-
                                 <th class="hidden-xs">Foto</th>
                                 <th>ID</th>
                                 <th>Produk</th>
                                 <th class="hidden-xs">Harga</th>
                                 <th>Ketersediaan</th>
                             </tr>
-
                             <tr>
-
-                                <td class="hidden-xs"><a href="#"><img src="assets/images/shop/bakpaokeju.jpg"
-                                                                       alt="Accessories Pack"/></a></td>
+                                <td class="hidden-xs"><a href="#"><img src="assets/images/shop/bakpaokeju.jpg" alt="Accessories Pack"/></a></td>
                                 <td>
                                     <h5 class="product-title font-alt">PR001</h5>
                                 </td>
@@ -705,7 +700,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p class="copyright font-alt">&copy; 2017&nbsp;<a href="index.html">MEGA JAYA</a></p>
+                            <p class="copyright font-alt">&copy; 2018&nbsp;<a href="/">MEGA JAYA</a></p>
                         </div>
                         <div class="col-sm-6">
                             <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a

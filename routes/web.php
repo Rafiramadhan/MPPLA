@@ -17,7 +17,7 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('/hasiljual','HomeController@getHasilJual');
-Route::get('Index2','HomeController@getIndex2');
+Route::get('index2','HomeController@getIndex2');
 Route::get('/index3','HomeController@getIndex3');
 Route::get('/indexadmin','HomeController@getIndexAdministrator');
 Route::get('/indexpenjual','HomeController@getIndexPenjual');

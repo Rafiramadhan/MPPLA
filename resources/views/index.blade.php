@@ -71,7 +71,7 @@
         <div class="hero-slider">
             <ul class="slides">
                 <li class="bg-dark-30 restaurant-page-header bg-dark"
-                    style="background-image:url(&quot;assets/images/restaurant/megajaya1.jpg&quot;);">
+                    style="background-image:url(&quot;assets/images/logobakpao.jpg&quot;);">
                     <div class="titan-caption">
                         <div class="caption-content">
                             <div class="font-alt mb-30 titan-title-size-1">Produk Asli Indonesia</div>
@@ -80,7 +80,7 @@
                     </div>
                 </li>
                 <li class="bg-dark-30 restaurant-page-header bg-dark"
-                    style="background-image:url(&quot;assets/images/restaurant/megajaya2.jpg&quot;);">
+                    style="background-image:url(&quot;assets/images/caro2.jpg&quot;);">
                     <div class="titan-caption">
                         <div class="caption-content">
                             <div class="font-alt mb-30 titan-title-size-2">Ayoo jadilah rakyat yg mencintai produk lokal
@@ -89,7 +89,7 @@
                         </div>
                 </li>
                 <li class="bg-dark-30 restaurant-page-header bg-dark"
-                    style="background-image:url(&quot;assets/images/restaurant/megajaya3.jpg&quot;);">
+                    style="background-image:url(&quot;assets/images/caro3.jpg&quot;);">
                     <div class="titan-caption">
                         <div class="caption-content">
                             <div class="font-alt mb-30 titan-title-size-1"> Rasakan Kenikmatannya</div>
