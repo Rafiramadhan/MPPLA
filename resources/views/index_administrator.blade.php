@@ -66,18 +66,18 @@
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span
                             class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
                             class="icon-bar"></span><span class="icon-bar"></span></button>
-                <a class="navbar-brand" href="index3.php">Mega Jaya</a>
+                <a class="navbar-brand" href="/index3">Mega Jaya</a>
             </div>
             <div class="collapse navbar-collapse" id="custom-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index3.php">Beranda</a></li>
+                    <li><a href="/index3">Beranda</a></li>
 
                     <li><a class="section-scroll" href="#produksi">Produk</a></li>
                     <li><a class="section-scroll" href="#penjual">Data Penjual</a></li>
                     <li><a class="section-scroll" href="#pemesanan">Pemesanan</a></li>
                     <li><a class="section-scroll" href="#riwayat">Riwayat Transaksi</a></li>
                     <li><a class="section-scroll" href="#kritik">KritikSaran</a></li>
-                    <li><a href="index.php">Keluar</a></li>
+                    <li><a href="/">Keluar</a></li>
                 </ul>
             </div>
         </div>
@@ -428,7 +428,7 @@
                                         </form>
                                         <hr class="divider-w mt-10 mb-20">
                             <p class="btn-list">
-                                <a href="index_administrator.blade.php" class="btn btn-g btn-round"
+                                <a href="/indexadmin" class="btn btn-g btn-round"
                                    type="submit">Tambahkan</a>&nbsp;
                         </div>
 
@@ -633,9 +633,8 @@
                             </div>
                         </div>
                     </div>
-        </div>
-        </li>
-        </ul>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -996,12 +995,8 @@
                         </select>
                     </div>
                     <button class="btn btn-d btn-round" type="submit">Update Data</button>&nbsp;
-
-
                 </div>
             </div>
-        </div>
-
         </div>
     </section>
 
@@ -1015,19 +1010,16 @@
                             <div class="col-sm-12">
                                 <h2 class="module-title font-alt">Masukan ID</h2>
                                 <div class="col-sm-6 col-sm-offset-3">
-
                                     <form class="form" role="form">
                                         <div class="form-group">
                                             <input class="form-control input-lg" type="text" placeholder="ID PENJUAL"/>
                                         </div>
-
                                     </form>
                                     <hr class="divider-w mt-10 mb-20">
                                     <div class="form-group">
-                                        <a href="lihatkritik.php" class="btn btn-round btn-b">Submit</a>
+                                        <a href="/lihatkritik" class="btn btn-round btn-b">Submit</a>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -1035,7 +1027,6 @@
             </ul>
         </div>
     </section>
-
 
     <hr class="divider-w">
     <section class="module" id="produksi">
@@ -1049,8 +1040,6 @@
                     <table class="table table-striped table-border checkout-table">
                         <tbody>
                         <tr>
-
-
                             <th class="hidden-xs">Foto</th>
                             <th>ID</th>
                             <th>Produk</th>
@@ -1059,7 +1048,6 @@
                             <th>Hapus</th>
                         </tr>
                         <tr>
-
                             <td class="hidden-xs"><a href="#"><img src="assets/images/shop/bakpaokeju.jpg"
                                                                    alt="Accessories Pack"/></a></td>
                             <td>
@@ -1075,12 +1063,9 @@
                                 <h5 class="product-title font-alt">1000 Buah</h5>
                             </td>
                             <td class="pr-remove"><a href="#" title="Remove"><i class="fa fa-times"></i></a></td>
-
                         </tr>
-
                         <tr>
-                            <td class="hidden-xs"><a href="#"><img src="assets/images/shop/bakpaokacangtanah.jpg"
-                                                                   alt="Accessories Pack"/></a></td>
+                            <td class="hidden-xs"><a href="#"><img src="assets/images/shop/bakpaokacangtanah.jpg" alt="Accessories Pack"/></a></td>
                             <td>
                                 <h5 class="product-title font-alt">PR002</h5>
                             </td>
@@ -1095,7 +1080,6 @@
                             </td>
                             <td class="pr-remove"><a href="#" title="Remove"><i class="fa fa-times"></i></a></td>
                         </tr>
-
                         <tr>
                             <td class="hidden-xs"><a href="#"><img src="assets/images/shop/bakpaokacanghijau.jpg"
                                                                    alt="Accessories Pack"/></a></td>
@@ -1207,7 +1191,6 @@
                     </table>
                     <hr class="divider-w mt-10 mb-20">
                     <p class="btn-list">
-
                         <button class="btn btn-d btn-round" type="submit">Update Data</button>&nbsp;
                 </div>
             </div>
@@ -1245,7 +1228,8 @@
                             <input class="form-control" type="text" placeholder="Stok"/>
                         </div>
                         <div>
-                            <input type="button" value="Pilih Gambar" id="imgFileUpload" class="btn-primary" style="cursor:pointer">
+                            <input type="button" value="Pilih Gambar" id="imgFileUpload" class="btn-primary"
+                                   style="cursor:pointer">
                             <br/>
                             <span id="spnFilePath"></span>
                             <input type="file" id="FileUpload1" style="display: none"/>
@@ -1411,9 +1395,7 @@
 
                                     <td class="pr-remove"><a href="#" title="cek"><i class="fa fa-check"></i></a>
                                     </td>
-
                                 </tr>
-
                                 <tr>
                                     <td>
                                         <h5 class="product-title font-alt">4</h5>
@@ -1517,8 +1499,6 @@
                             <p class="btn-list">
                                 <button class="btn btn-g btn-round" type="submit">Verifikasi</button>&nbsp;
                                 <button class="btn btn-d btn-round" type="submit">Update Data</button>&nbsp;
-
-
                         </div>
                     </div>
                     <!--
@@ -1593,7 +1573,6 @@
                   -->
                 </div>
             </section>
-
             <!--
             <section class="module" id="news">
               <div class="container">
@@ -1657,7 +1636,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p class="copyright font-alt">&copy; 2017&nbsp;<a href="index.html">MEGA JAYA</a></p>
+                            <p class="copyright font-alt">&copy; 2018&nbsp;<a href="/">MEGA JAYA</a></p>
                         </div>
                         <div class="col-sm-6">
                             <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a

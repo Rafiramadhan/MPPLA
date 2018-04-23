@@ -63,7 +63,7 @@
       <nav class="navbar navbar-custom navbar-fixed-top navbar-transparent" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index3.php">Mega Jaya</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/index3">Mega Jaya</a>
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -73,8 +73,8 @@
               <li><a href="#totop">Beranda</a></li>
               <li><a class="section-scroll" href="#services">Pelayanan</a></li>
               <li><a class="section-scroll" href="#products">Produk</a></li>
-              <li><a href="index_administrator.blade.php">Halaman Admin</a></li>
-              <li><a href="index.php">Keluar</a></li>
+              <li><a href="/indexadmin">Halaman Admin</a></li>
+              <li><a href="/">Keluar</a></li>
             </ul>
           </div>
             </ul>
@@ -222,7 +222,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6">
-                <p class="copyright font-alt">&copy; 2017&nbsp;<a href="index.html">MEGA JAYA</a></p>
+                <p class="copyright font-alt">&copy; 2018&nbsp;<a href="/">MEGA JAYA</a></p>
               </div>
               <div class="col-sm-6">
                 <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>

@@ -73,9 +73,9 @@
               <li><a href="#totop">Beranda</a></li>
               <li><a class="section-scroll" href="#services">Pelayanan</a></li>
               
-              <li><a class="section-scroll" href="index_penjual.php">Produk</a></li>
+              <li><a class="section-scroll" href="/indexpenjual">Produk</a></li>
 
-              <li><a href="index.php">Keluar</a></li>
+              <li><a href="/">Keluar</a></li>
             </ul>
           </div>
             </ul>
@@ -223,7 +223,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6">
-                <p class="copyright font-alt">&copy; 2017&nbsp;<a href="index.html">MEGA JAYA</a></p>
+                <p class="copyright font-alt">&copy; 2018&nbsp;<a href="/">MEGA JAYA</a></p>
               </div>
               <div class="col-sm-6">
                 <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
