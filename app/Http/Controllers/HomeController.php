@@ -31,49 +31,49 @@ class HomeController extends Controller
 
     public function getIndex3()
     {
-        return view('admin.index3');
+        return view('pages.admin.index3');
     }
     public function getIndexAdministrator()
     {
-        return view('admin.index_administrator');
+        return view('pages.admin.index_administrator');
     }
     public function getLihatHasilJual()
     {
-        return view('admin.lihathasiljual');
+        return view('pages.admin.lihathasiljual');
     }
     public function getLihatKritik()
     {
-        return view('admin.lihatkritik');
+        return view('pages.admin.lihatkritik');
     }
 
     //Penjual
 
     public function getTempPemesanan()
     {
-        return view('penjual.temppemesanan');
+        return view('pages.penjual.temppemesanan');
     }
     public function getHasilJual()
     {
-        return view('penjual.hasiljual');
+        return view('pages.penjual.hasiljual');
     }
     public function getIndex2()
     {
-        return view('penjual.index2');
+        return view('pages.penjual.index2');
     }
     public function getIndexPenjual()
     {
-        return view('penjual.index_penjual');
+        return view('pages.penjual.index_penjual');
     }
     public function getKritikSaran()
     {
-        return view('penjual.kritiksaran');
+        return view('pages.penjual.kritiksaran');
     }
     public function getPemesanan()
     {
-        return view('penjual.pemesanan');
+        return view('pages.penjual.pemesanan');
     }
     public function getPenjualan()
     {
-        return view('penjual.penjualan');
+        return view('pages.penjual.penjualan');
     }
 }

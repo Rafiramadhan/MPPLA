@@ -71,7 +71,6 @@
             <div class="collapse navbar-collapse" id="custom-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/index3">Beranda</a></li>
-
                     <li><a class="section-scroll" href="#produksi">Produk</a></li>
                     <li><a class="section-scroll" href="#penjual">Data Penjual</a></li>
                     <li><a class="section-scroll" href="#pemesanan">Pemesanan</a></li>
