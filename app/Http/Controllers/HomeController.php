@@ -11,56 +11,69 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+    //Umum
     public function index()
     {
         return view('index');
-    }
-    public function getHasilJual()
-    {
-        return view('hasiljual');
-    }
-    public function getIndex2()
-    {
-        return view('index2');
-    }
-    public function getIndex3()
-    {
-        return view('Index3');
-    }
-    public function getIndexAdministrator()
-    {
-        return view('index_administrator');
-    }
-    public function getIndexPenjual()
-    {
-        return view('index_penjual');
-    }
-    public function getKritikSaran()
-    {
-        return view('kritiksaran');
-    }
-    public function getLihatHasilJual()
-    {
-        return view('lihathasiljual');
-    }
-    public function getLihatKritik()
-    {
-        return view('lihatkritik');
     }
     public function getLogin()
     {
         return view('login');
     }
-    public function getPemesanan()
-    {
-        return view('pemesanan');
-    }
-    public function getPenjualan()
-    {
-        return view('penjualan');
-    }
     public function getTentang()
     {
         return view('tentang');
+    }
+
+    //Admin
+
+    public function getIndex3()
+    {
+        return view('admin.index3');
+    }
+    public function getIndexAdministrator()
+    {
+        return view('admin.index_administrator');
+    }
+    public function getLihatHasilJual()
+    {
+        return view('admin.lihathasiljual');
+    }
+    public function getLihatKritik()
+    {
+        return view('admin.lihatkritik');
+    }
+
+    //Penjual
+
+    public function getTempPemesanan()
+    {
+        return view('penjual.temppemesanan');
+    }
+    public function getHasilJual()
+    {
+        return view('penjual.hasiljual');
+    }
+    public function getIndex2()
+    {
+        return view('penjual.index2');
+    }
+    public function getIndexPenjual()
+    {
+        return view('penjual.index_penjual');
+    }
+    public function getKritikSaran()
+    {
+        return view('penjual.kritiksaran');
+    }
+    public function getPemesanan()
+    {
+        return view('penjual.pemesanan');
+    }
+    public function getPenjualan()
+    {
+        return view('penjual.penjualan');
     }
 }
