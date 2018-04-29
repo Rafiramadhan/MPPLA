@@ -82,4 +82,126 @@ class BakpaoController extends Controller
     {
         //
     }
+
+
+    public function buatbakpao(Request $request)
+    {
+      $data = array();
+      $status = 200;
+      $message = "Success";
+
+
+
+      if (bakpao::where('jenis_bakpao', '=', $request['jenis_bakpao'])->count() < 0 )
+      {
+
+        $bakpao = bakpao::create([
+          'jenis_bakpao' => $request['jenis_bakpao'],
+          'harga_bakpao' => $request['harga_bakpao'],
+          'stok_bakpao' => $request['stok_bakpao']
+        ]);
+      }
+      else {
+        $status = 201;
+        $message = "sudah ada jenis ini";
+      }
+
+
+      $data = array(
+        'data'=>null,
+        'status_code'=>$status,
+        'message'=>$message);
+
+
+
+      return  \Response::json($data, $status);
+    }
+
+    public function listBakpao(Request $request)
+    {
+      $data = array();
+      $status = 200;
+      $message = "Success";
+
+
+      $bakpao = bakpao::get();
+
+      return  \Response::json($bakpao, 200);
+    }
+
+    public function perbaruiBakpao(Request $request)
+    {
+      $data = array();
+      $status = 200;
+      $message = "Success";
+
+
+
+      if (bakpao::where('jenis_bakpao', '=', $request['jenis_bakpao'])->count() > 0 )
+      {
+
+        $bakpao = bakpao::where('jenis_bakpao', '=', $request['jenis_bakpao'])->update([
+          'harga_bakpao' => $request['harga_bakpao'],
+          'stok_bakpao' => $request['stok_bakpao']
+        ]);
+      }
+      else {
+        $status = 201;
+        $message = "bakpao tidak ditemukan";
+      }
+      $data = array(
+        'data'=>null,
+        'status_code'=>$status,
+        'message'=>$message);
+
+
+
+      return  \Response::json($data, $status);
+    }
+
+    public function hapus(Request $request)
+    {
+      $data = array();
+      $status = 200;
+      $message = "Success";
+      if (bakpao::where('jenis_bakpao', '=', $request['jenis_bakpao'])->count() > 0 )
+      {
+
+        $bakpao = bakpao::where('jenis_bakpao', '=', $request['jenis_bakpao'])->delete();
+      }
+      else {
+        $status = 201;
+        $message = "bakpao tidak ditemukan";
+      }
+      $data = array(
+        'data'=>null,
+        'status_code'=>$status,
+        'message'=>$message);
+      return  \Response::json($data, $status);
+    }
+
+    public function ambilBakpao(Request $request)
+    {
+      $data = array();
+      $status = 200;
+      $message = "Success";
+      if (bakpao::where('jenis_bakpao', '=', $request['jenis_bakpao'])->count() > 0 )
+      {
+
+        $bakpao = bakpao::where('jenis_bakpao', '=', $request['jenis_bakpao'])->get();
+        $ubah = bakpao::where('jenis_bakpao', '=', $request['jenis_bakpao'])->update([
+          'stok_bakpao' => $bakpao->stok_bakpao - $request['jumlah']
+        ]);
+      }
+      else {
+        $status = 201;
+        $message = "bakpao tidak ditemukan";
+      }
+      $data = array(
+        'data'=>null,
+        'status_code'=>$status,
+        'message'=>$message);
+      return  \Response::json($data, $status);
+    }
+
 }

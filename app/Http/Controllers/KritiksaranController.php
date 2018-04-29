@@ -100,7 +100,7 @@ class KritiksaranController extends Controller
         $data = array(
           'data'=>null,
           'status_code'=>$status,
-          'message'=>"Success");
+          'message'=>$message);
 
 
 
