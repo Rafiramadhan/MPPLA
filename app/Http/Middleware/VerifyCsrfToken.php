@@ -14,6 +14,10 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         //
           'tes/tambahkritik',
-          'tes/liatkritik'
+          'tes/tambahbakpao',
+          'tes/ubahbakpao',
+          'tes/lihatbakpao',
+          'tes/hapusbakpao',
+          'tes/tambahtransaksi'
     ];
 }

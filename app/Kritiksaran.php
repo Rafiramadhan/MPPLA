@@ -4,9 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Kritiksaran extends Model
+class KritikSaran extends Model
 {
-  protected $fillable = [
-      'id_user','kritik','saran'
-  ];
+    //
 }

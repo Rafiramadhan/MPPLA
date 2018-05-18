@@ -30,5 +30,18 @@ Route::get('/penjualan','HomeController@getPenjualan');
 Route::get('tentang','HomeController@getTentang');
 
 
-Route::post('tes/tambahkritik','KritiksaranController@addKritik');
+Route::post('tes/tambahkritik','BakpaoController@create_bakpao');
 Route::post('tes/liatkritik','KritiksaranController@showKritik');
+
+
+Route::post('tes/tambahbakpao','BakpaoController@createBakpao');
+Route::post('tes/ubahbakpao','BakpaoController@editBakpao');
+Route::post('tes/lihatbakpao','BakpaoController@getBakpao');
+Route::post('tes/hapusbakpao','BakpaoController@deleteBakpao');
+
+Route::post('tes/tambahtransaksi','TransaksiController@addTransaction');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

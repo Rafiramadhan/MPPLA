@@ -2,84 +2,37 @@
 
 namespace App\Http\Controllers;
 
-use App\transaksi;
 use Illuminate\Http\Request;
+use App\Bakpao;
+use App\Pemesanan;
+use App\ItemPemesanan;
 
 class TransaksiController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
+    //
+	public function addTransaction(Request $request)
+	{
+		$transaksi = Pemesanan::create([
+            'user_id' => $request['user_id'],
+            'status' => 0,
+            'total_harga' => $request['total_harga']
+        ]);
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+		for($key = 0; $key< $request->item; $key++){
+			$data = [
+				"bakpao_id" => $request->bakpao_id[$key],
+				"jumlah" => $request->jumlah[$key],
+				"pemesanan_id" => $transaksi->id,
+				];
+			$item_transaksi[] = $data;
+			$transaksi = ItemPemesanan::create($data);
+		}
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\transaksi  $transaksi
-     * @return \Illuminate\Http\Response
-     */
-    public function show(transaksi $transaksi)
-    {
-        //
-    }
+		return $transaksi;
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\transaksi  $transaksi
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(transaksi $transaksi)
-    {
-        //
-    }
+		//return ItemPemesanan::create($item_transaksi);
+	}
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\transaksi  $transaksi
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, transaksi $transaksi)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\transaksi  $transaksi
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(transaksi $transaksi)
-    {
-        //
-    }
 }
