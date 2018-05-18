@@ -70,7 +70,7 @@
             </div>
             <div class="collapse navbar-collapse" id="custom-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/index">Beranda</a></li>
+                    <li><a href="/">Beranda</a></li>
                 </ul>
             </div>
         </div>
