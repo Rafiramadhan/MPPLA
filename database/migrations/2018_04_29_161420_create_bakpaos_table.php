@@ -17,6 +17,7 @@ class CreateBakpaosTable extends Migration
             $table->increments('id');
             $table->string('jenis_bakpao');
             $table->integer('harga_bakpao');
+            $table->string('path_gambar');
             $table->integer('stok_bakpao')->default(0);
             $table->timestamps();
         });

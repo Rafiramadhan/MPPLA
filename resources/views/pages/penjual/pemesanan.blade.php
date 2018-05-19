@@ -51,29 +51,31 @@
                                     <th>Hapus</th>
                                 </tr>
                                 @foreach($bakpaos as $bakpao)
-                                <form name="keju">
-                                    <tr>
-                                        <td class="hidden-xs"><a href="#"><img src="assets/images/shop/bakpaokeju.jpg"
-                                                                               alt="Accessories Pack"/></a></td>
-                                        <td>
-                                            <h5 class="product-title font-alt">{{$bakpao->jenis_bakpao}}</h5>
-                                        </td>
-                                        <td class="hidden-xs">
-                                            <h5 class="product-title font-alt">Rp.{{$bakpao->harga_bakpao}}</h5>
-                                        </td>
-                                        <td>
-                                            <input class="form-control" type="text" name="keju" value="0" min="0"
-                                                   onFocus="startCalc();" onBlur="stopCalc();"/>
-                                        </td>
-                                        <td>
-                                            <input readonly type=text value='' name="harga" readonly style="text:bold">
-                                        </td>
-                                        <td class="pr-remove"><a href="#" title="Remove"><i class="fa fa-times"></i></a>
-                                        </td>
-                                    </tr>
-                                </form>
+                                    <form name="{{$bakpao->jenis_bakpao}}">
+                                        <tr>
+                                            <td class="hidden-xs"><a href="#"><img src="{{$bakpao->path_gambar}}"
+                                                                                   alt="Accessories Pack"/></a></td>
+                                            <td>
+                                                <h5 class="product-title font-alt">{{$bakpao->jenis_bakpao}}</h5>
+                                            </td>
+                                            <td class="hidden-xs">
+                                                <h5 class="product-title font-alt">Rp.{{$bakpao->harga_bakpao}}</h5>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" type="text" name="{{$bakpao->jenis_bakpao}}"
+                                                       value="0" min="0"
+                                                       onFocus="startCalc();" onBlur="stopCalc();"/>
+                                            </td>
+                                            <td>
+                                                <input readonly type=text value='' name="harga" readonly
+                                                       style="text:bold">
+                                            </td>
+                                            <td class="pr-remove"><a href="#" title="Remove"><i class="fa fa-times"></i></a>
+                                            </td>
+                                        </tr>
+                                    </form>
                                 @endforeach
-                                
+
                                 </tbody>
                             </table>
                         </div>
@@ -150,14 +152,31 @@
         }
 
         function calc() {
-            bpkeju = document.keju.keju.value;
-            // two = document.hkeju.keju.value;
-            // three = document.diskon.value;
-            document.keju.harga.value = "Rp." + (bpkeju * 3100);
-            bpayam = document.ayam.ayam.value;
-            document.ayam.harga.value = "Rp." + (bpayam * 3500);
+            bpkeju = document.Keju.Keju.value;
+            document.Keju.harga.value = "Rp." + (bpkeju * 3100);
 
-            total = (bpkeju * 3100) + (bpayam * 3500);
+            bpkh = document.Kacang_Hijau.Kacang_Hijau.value;
+            document.Kacang_Hijau.harga.value = "Rp." + (bpkh * 3000);
+
+            bpkt = document.Kacang_Tanah.Kacang_Tanah.value;
+            document.Kacang_Tanah.harga.value = "Rp." + (bpkt * 3000);
+
+            bpayam = document.Ayam.Ayam.value;
+            document.Ayam.harga.value = "Rp." + (bpayam * 3500);
+
+            bpcoklat = document.Coklat.Coklat.value;
+            document.Coklat.harga.value = "Rp." + (bpcoklat * 3100);
+
+            bpstraw = document.Strawberry.Strawberry.value;
+            document.Strawberry.harga.value = "Rp." + (bpstraw * 3100);
+
+            bptelo = document.Telo.Telo.value;
+            document.Telo.harga.value = "Rp." + (bptelo * 3000);
+
+            bplapa = document.Kelapa.Kelapa.value;
+            document.Kelapa.harga.value = "Rp." + (bplapa * 3000);
+
+            total = (bpkeju * 3100) + (bpkh * 3000) + (bpkt * 3000) + (bpayam * 3500) + (bpcoklat * 3100) + (bpstraw * 3100) + (bptelo * 3000) + (bplapa * 3000);
             document.checkout.harga.value = "Rp." + total;
             document.checkout.hargaf.value = "Rp." + (total + 1000);
         }
