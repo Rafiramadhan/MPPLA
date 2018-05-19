@@ -40,7 +40,14 @@ Route::post('tes/ubahbakpao','BakpaoController@editBakpao');
 Route::post('tes/lihatbakpao','BakpaoController@getBakpao');
 Route::post('tes/hapusbakpao','BakpaoController@deleteBakpao');
 
+Route::post('tes/tambahpenjual','UserController@createUser');
+// Route::post('tes/ubahpenjual','BakpaoController@editBakpao');
+// Route::post('tes/lihatpenjual','BakpaoController@getBakpao');
+// Route::post('tes/hapuspenjual','BakpaoController@deleteBakpao');
+
 Route::post('tes/tambahtransaksi','TransaksiController@addTransaction');
+Route::post('tes/tolaktransaksi','TransaksiController@declineTransaction');
+Route::post('tes/historypenjual','TransaksiController@getUserHistoryTransaction');
 
 
 Auth::routes();
