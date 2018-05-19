@@ -50,15 +50,16 @@
                                     <th>Total Harga</th>
                                     <th>Hapus</th>
                                 </tr>
+                                @foreach($bakpaos as $bakpao)
                                 <form name="keju">
                                     <tr>
                                         <td class="hidden-xs"><a href="#"><img src="assets/images/shop/bakpaokeju.jpg"
                                                                                alt="Accessories Pack"/></a></td>
                                         <td>
-                                            <h5 class="product-title font-alt">Keju</h5>
+                                            <h5 class="product-title font-alt">{{$bakpao->jenis_bakpao}}</h5>
                                         </td>
                                         <td class="hidden-xs">
-                                            <h5 class="product-title font-alt">Rp.3100</h5>
+                                            <h5 class="product-title font-alt">Rp.{{$bakpao->harga_bakpao}}</h5>
                                         </td>
                                         <td>
                                             <input class="form-control" type="text" name="keju" value="0" min="0"
@@ -71,27 +72,8 @@
                                         </td>
                                     </tr>
                                 </form>
-                                <form name="ayam">
-                                    <tr>
-                                        <td class="hidden-xs"><a href="#"><img src="assets/images/shop/bakpaoayam.jpg"
-                                                                               alt="Men’s Casual Pack"/></a></td>
-                                        <td>
-                                            <h5 class="product-title font-alt">Ayam</h5>
-                                        </td>
-                                        <td class="hidden-xs">
-                                            <h5 class="product-title font-alt">Rp.3500</h5>
-                                        </td>
-                                        <td>
-                                            <input class="form-control" type="text" name="ayam" value="0" min="0"
-                                                   onFocus="startCalc();" onBlur="stopCalc();"/>
-                                        </td>
-                                        <td>
-                                            <input readonly type=text value='' name="harga" readonly style="text:bold">
-                                        </td>
-                                        <td class="pr-remove"><a href="#" title="Remove"><i class="fa fa-times"></i></a>
-                                        </td>
-                                    </tr>
-                                </form>
+                                @endforeach
+                                
                                 </tbody>
                             </table>
                         </div>

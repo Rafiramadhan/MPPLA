@@ -60,23 +60,8 @@ class BakpaoController extends Controller
       return \Response::json($data, 202);
     }
     public function getBakpao(Request $request){
-
-      if (Bakpao::count() < 0) {
-            $data = array(
-            'data'=>null,
-            'status_code'=>202,
-            'message'=>"Bakpao tidak ditemukan");
-
-          }
-      else
-      {
-        $bakpao = Bakpao::get();
-        $data = array(
-        'data'=>$bakpao,
-        'status_code'=>202,
-        'message'=>"Bakpao berhasil diubah");
-      }
-      return \Response::json($data, 202);
+      $bakpaos = Bakpao::get();
+      return view('pages.penjual.pemesanan', compact('bakpaos'));
     }
     public function deleteBakpao(Request $request){
 
