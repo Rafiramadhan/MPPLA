@@ -168,14 +168,14 @@
         }
 
         function calc() {
-            one = document.keju.keju.value;
+            bpkeju = document.keju.keju.value;
             // two = document.hkeju.keju.value;
             // three = document.diskon.value;
-            document.keju.harga.value = "Rp." + (one * 3100);
-            two = document.ayam.ayam.value;
-            document.ayam.harga.value = "Rp." + (two * 3500);
+            document.keju.harga.value = "Rp." + (bpkeju * 3100);
+            bpayam = document.ayam.ayam.value;
+            document.ayam.harga.value = "Rp." + (bpayam * 3500);
 
-            total = (one * 3100) + (two * 3500);
+            total = (bpkeju * 3100) + (bpayam * 3500);
             document.checkout.harga.value = "Rp." + total;
             document.checkout.hargaf.value = "Rp." + (total + 1000);
         }

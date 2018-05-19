@@ -30,12 +30,8 @@ Route::get('/penjualan','HomeController@getPenjualan');
 Route::get('/tentang','HomeController@getTentang');
 Route::get('/temppemesanan', 'HomeController@getTempPemesanan');
 
-<<<<<<< Updated upstream
 
 Route::post('tes/tambahkritik','BakpaoController@create_bakpao');
-=======
-Route::post('tes/tambahkritik','KritiksaranController@addKritik');
->>>>>>> Stashed changes
 Route::post('tes/liatkritik','KritiksaranController@showKritik');
 
 
