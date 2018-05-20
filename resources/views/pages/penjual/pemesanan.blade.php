@@ -91,19 +91,19 @@
                             <div class="shop-Cart-totalbox">
                                 <h4 class="font-alt">Total</h4>
                                 <form name="checkout">
-                                    <table class="table table-striped table-border checkout-table">
+                                    <table class="table table-striped table-border">
                                         <tbody>
                                         <tr>
-                                            <th>Subtotal :</th>
+                                            <th>Subtotal&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</th>
                                             <td>Rp.<input readonly class="currency" name="harga" readonly
                                                           style="text:bold"></td>
                                         </tr>
                                         <tr>
-                                            <th>Biaya Admin :</th>
+                                            <th>Biaya Admin&nbsp&nbsp:</th>
                                             <td>Rp.1000</td>
                                         </tr>
                                         <tr class="shop-Cart-totalprice">
-                                            <th>Total :</th>
+                                            <th>Total&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</th>
                                             <td>Rp.<input readonly class="currency" name="hargaf" readonly
                                                           style="text:bold"></td>
                                         </tr>
@@ -127,22 +127,6 @@
             <div class="module-small bg-dark">
             </div>
             <hr class="divider-d">
-            <footer class="footer bg-dark">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <p class="copyright font-alt">&copy; 2018&nbsp;<a href="/">MEGA JAYA</a></p>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a
-                                        href="#"><i
-                                            class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a
-                                        href="#"><i class="fa fa-skype"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
         </div>
         <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
     </main>
