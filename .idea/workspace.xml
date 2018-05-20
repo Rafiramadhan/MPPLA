@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fdbdb408-c50d-4ad6-99d5-ac87cd0205c8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BakpaoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BakpaoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_04_29_161420_create_bakpaos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_04_29_161420_create_bakpaos_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/penjual/pemesanan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/penjual/pemesanan.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,12 +19,12 @@
       <file leaf-file-name="pemesanan.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/penjual/pemesanan.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="178" column="159" selection-start-line="178" selection-start-column="159" selection-end-line="178" selection-end-column="159" />
+            <state relative-caret-position="389">
+              <caret line="69" column="100" lean-forward="true" selection-start-line="69" selection-start-column="99" selection-end-line="69" selection-end-column="100" />
               <folding>
-                <element signature="e#3550#3567#0#HTML" expanded="true" />
+                <element signature="e#3764#3781#0#HTML" expanded="true" />
                 <element signature="e#6052#6069#0#HTML" expanded="true" />
-                <element signature="e#6694#6711#0#HTML" expanded="true" />
+                <element signature="e#5608#5625#0#HTML" expanded="true" />
                 <element signature="e#7896#7902#0#HTML" expanded="true" />
                 <element signature="e#7907#7913#0#HTML" expanded="true" />
               </folding>
@@ -385,12 +381,12 @@
       <workItem from="1525082746179" duration="2384000" />
       <workItem from="1526193788359" duration="1443000" />
       <workItem from="1526569643701" duration="640000" />
-      <workItem from="1526630667374" duration="9263000" />
+      <workItem from="1526630667374" duration="12097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38330000" />
+    <option name="totallyTimeSpent" value="41164000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -401,8 +397,8 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32863188" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27786753" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32863188" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27786753" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -707,12 +703,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/penjual/pemesanan.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="178" column="159" selection-start-line="178" selection-start-column="159" selection-end-line="178" selection-end-column="159" />
+        <state relative-caret-position="389">
+          <caret line="69" column="100" lean-forward="true" selection-start-line="69" selection-start-column="99" selection-end-line="69" selection-end-column="100" />
           <folding>
-            <element signature="e#3550#3567#0#HTML" expanded="true" />
+            <element signature="e#3764#3781#0#HTML" expanded="true" />
             <element signature="e#6052#6069#0#HTML" expanded="true" />
-            <element signature="e#6694#6711#0#HTML" expanded="true" />
+            <element signature="e#5608#5625#0#HTML" expanded="true" />
             <element signature="e#7896#7902#0#HTML" expanded="true" />
             <element signature="e#7907#7913#0#HTML" expanded="true" />
           </folding>

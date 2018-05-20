@@ -46,6 +46,7 @@
                                     <th class="hidden-xs">Barang</th>
                                     <th>Deskripsi</th>
                                     <th class="hidden-xs">Harga</th>
+                                    <th class="hidden-xs">Stok</th>
                                     <th>Jumlah</th>
                                     <th>Total Harga</th>
                                     <th>Hapus</th>
@@ -61,14 +62,17 @@
                                             <td class="hidden-xs">
                                                 <h5 class="product-title font-alt">Rp.{{$bakpao->harga_bakpao}}</h5>
                                             </td>
+                                            <td class="hidden-xs">
+                                                <h5 class="product-title font-alt">{{$bakpao->stok_bakpao}}</h5>
+                                            </td>
                                             <td>
-                                                <input class="form-control" type="text" name="{{$bakpao->jenis_bakpao}}"
-                                                       value="0" min="0"
+                                                <input class="form-control" type="number" max="{{$bakpao->stok_bakpao}}" name="{{$bakpao->jenis_bakpao}}"
                                                        onFocus="startCalc();" onBlur="stopCalc();"/>
                                             </td>
                                             <td>
-                                                <input readonly type=text value='' name="harga" readonly
-                                                       style="text:bold">
+                                                Rp.<input readonly class="currency" type=text value='' name="harga"
+                                                          readonly
+                                                          style="text:bold">
                                             </td>
                                             <td class="pr-remove"><a href="#" title="Remove"><i class="fa fa-times"></i></a>
                                             </td>
@@ -91,8 +95,8 @@
                                         <tbody>
                                         <tr>
                                             <th>Subtotal :</th>
-                                            <td><input readonly type=text value='' name="harga" readonly
-                                                       style="text:bold"></td>
+                                            <td>Rp.<input readonly class="currency" name="harga" readonly
+                                                          style="text:bold"></td>
                                         </tr>
                                         <tr>
                                             <th>Biaya Admin :</th>
@@ -100,8 +104,8 @@
                                         </tr>
                                         <tr class="shop-Cart-totalprice">
                                             <th>Total :</th>
-                                            <td><input readonly type=text value='' name="hargaf" readonly
-                                                       style="text:bold"></td>
+                                            <td>Rp.<input readonly class="currency" name="hargaf" readonly
+                                                          style="text:bold"></td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -153,36 +157,64 @@
 
         function calc() {
             bpkeju = document.Keju.Keju.value;
-            document.Keju.harga.value = "Rp." + (bpkeju * 3100);
+            document.Keju.harga.value = (bpkeju * 3100);
 
             bpkh = document.Kacang_Hijau.Kacang_Hijau.value;
-            document.Kacang_Hijau.harga.value = "Rp." + (bpkh * 3000);
+            document.Kacang_Hijau.harga.value = (bpkh * 3000);
 
             bpkt = document.Kacang_Tanah.Kacang_Tanah.value;
-            document.Kacang_Tanah.harga.value = "Rp." + (bpkt * 3000);
+            document.Kacang_Tanah.harga.value = (bpkt * 3000);
 
             bpayam = document.Ayam.Ayam.value;
-            document.Ayam.harga.value = "Rp." + (bpayam * 3500);
+            document.Ayam.harga.value = (bpayam * 3500);
 
             bpcoklat = document.Coklat.Coklat.value;
-            document.Coklat.harga.value = "Rp." + (bpcoklat * 3100);
+            document.Coklat.harga.value = (bpcoklat * 3100);
 
             bpstraw = document.Strawberry.Strawberry.value;
-            document.Strawberry.harga.value = "Rp." + (bpstraw * 3100);
+            document.Strawberry.harga.value = (bpstraw * 3100);
 
             bptelo = document.Telo.Telo.value;
-            document.Telo.harga.value = "Rp." + (bptelo * 3000);
+            document.Telo.harga.value = (bptelo * 3000);
 
             bplapa = document.Kelapa.Kelapa.value;
-            document.Kelapa.harga.value = "Rp." + (bplapa * 3000);
+            document.Kelapa.harga.value = (bplapa * 3000);
 
             total = (bpkeju * 3100) + (bpkh * 3000) + (bpkt * 3000) + (bpayam * 3500) + (bpcoklat * 3100) + (bpstraw * 3100) + (bptelo * 3000) + (bplapa * 3000);
-            document.checkout.harga.value = "Rp." + total;
-            document.checkout.hargaf.value = "Rp." + (total + 1000);
+            document.checkout.harga.value = total;
+            document.checkout.hargaf.value = (total + 1000);
         }
 
         function stopCalc() {
             clearInterval(interval);
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            //apply on typing and focus
+            $('input.currency').on('focus', function () {
+                $(this).manageCommas();
+            });
+            //then sanatize on leave
+            // if sanitizing needed on form submission time,
+            //then comment beloc function here and call in in form submit function.
+            // $('input.currency').on('focus', function () {
+            //     $(this).santizeCommas();
+            // });
+        });
+
+        String.prototype.addComma = function () {
+            return this.replace(/(.)(?=(.{3})+$)/g, "$1,")
+        }
+        //Jquery global extension method
+        $.fn.manageCommas = function () {
+            return this.each(function () {
+                $(this).val($(this).val().replace(/(,| )/g, '').addComma());
+            })
+        }
+
+        $.fn.santizeCommas = function () {
+            return $(this).val($(this).val().replace(/(,| )/g, ''));
         }
     </script>
 @endsection
