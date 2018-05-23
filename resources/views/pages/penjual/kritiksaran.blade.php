@@ -91,21 +91,18 @@
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
                     <hr class="divider-w mt-10 mb-20">
-                    <form class="form" role="form">
+                    <form class="form" role="form" action="/tambahkritik" method="post">
+                    @csrf
                         <div class="form-group">
-                            <input class="form-control input-lg" type="text" placeholder="ID Penjual"/>
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" type="text" placeholder="Nama Penjual"/>
+                            <input class="form-control" type="text" placeholder="Nama Penjual" value = "{{Auth::user()->nama}}" disabled/>
                         </div>
 
-                        <textarea class="form-control" rows="7" placeholder="Kritik"></textarea>
-                        <textarea class="form-control" rows="7" placeholder="Saran"></textarea>
+                        <textarea class="form-control" rows="7" name="isi" placeholder="Kritik / Saran"></textarea>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-block btn-round btn-b">Submit</button>
+                    </div>
                     </form>
                     <br>
-                    <div class="form-group">
-                        <a href="/index2" class="btn btn-round btn-b">Submit</a>
-                    </div>
                 </div>
             </div>
         </div>

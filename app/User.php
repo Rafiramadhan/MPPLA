@@ -2,12 +2,14 @@
 
 namespace App;
 
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+
+class User extends Authenticatable
 {
     protected $fillable = [
-      'nama','kontak','email', 'role' 
+      'nama','kontak','email', 'role' , 'password'
   ];
   	public function pemesanan()
   	{
@@ -25,6 +27,15 @@ class User extends Model
   	{
   		return $this->hasMany('App\KritikSaran');
   	}
+
+    public function setAttribute($key, $value)
+  {
+    $isRememberTokenAttribute = $key == $this->getRememberTokenName();
+    if (!$isRememberTokenAttribute)
+    {
+      parent::setAttribute($key, $value);
+    }
+  }
   	
 
 }

@@ -43,6 +43,26 @@ class UserController extends Controller
 			]);
 	}
 
+	public function createUserDummy()
+	{
+		$user = User::create([
+			'nama' => 'byan',
+            'kontak' => '082386130150',
+            'password' => bcrypt('passwordku'),
+            'email' => 'abyandafa@gmail.com',
+            'role' => 'Penjual'
+			]);
+
+		$user_detail = UserDetail::create([
+			'user_id' => $user->id,
+            'alamat' => 'bme timur',
+            // 'penghasilan_bersih' => $request['penghasilan_bersih'],
+            // 'penghasilan_kotor' => $request['penghasilan_kotor'],
+            'admin_id' => '7'
+			]);
+		return dd("success");
+	}
+
 	public function getUserTransactionHistory(Request $request)
 	{
 		
@@ -51,17 +71,11 @@ class UserController extends Controller
 	public function addKritikSaran(Request $request)
 	{
 		$user = KritikSaran::create([
-			'user_id' => $request['user_id'],
+			'user_id' => \Auth::user()->id,
             'isi' => $request['isi']
 			]);
-	}
 
-	public function addKritikSaran(Request $request)
-	{
-		$kritik_saran = KritikSaran::create([
-			'user_id' => $request['user_id'],
-            'isi' => $request['isi']
-			]);
+		return redirect('/indexadmin');
 	}
 
 }

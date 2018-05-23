@@ -63,7 +63,10 @@ class BakpaoController extends Controller
     public function getBakpao(Request $request)
     {
         $bakpaos = Bakpao::get();
-        return view('pages.penjual.pemesanan', compact('bakpaos'));
+        $data = [
+            'bakpaos' => $bakpaos
+        ];
+        return view('pages.penjual.pemesanan', $data);
     }
 
     public function deleteBakpao(Request $request)

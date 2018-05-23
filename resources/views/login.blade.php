@@ -91,50 +91,62 @@
                     <div class="col-sm-5 col-sm-offset-1 mb-sm-40">
                         <h4 class="font-alt">Masuk</h4>
                         <hr class="divider-w mb-10">
-                        <form class="form">
+                        <form class="form" action="/login" method="post">
+                         @csrf
                             <div class="form-group">
-                                <input class="form-control" id="username" type="text" name="username"
-                                       placeholder="Username"/>
+                                <input class="form-control" id="username" type="text" name="email"
+                                       placeholder="Email"/>
                             </div>
-                            <div class="form-group">
-                                <input class="form-control" id="username" type="text" name="username"
-                                       placeholder="Admin/Penjual"/>
-                            </div>
+                            
                             <div class="form-group">
                                 <input class="form-control" id="password" type="password" name="password"
                                        placeholder="Password"/>
                             </div>
+                        
                             <div class="form-group">
-                                <a href="/indexadmin" class="btn btn-round btn-b">Login</a>
+                                <button type="submit" class="btn btn-block btn-round btn-b">login</button>
                             </div>
-                            <div class="form-group"><a href="">lupa Password?</a></div>
                         </form>
                     </div>
                     <div class="col-sm-5">
                         <h4 class="font-alt">Daftar</h4>
                         <hr class="divider-w mb-10">
-                        <form class="form">
+                        @if (count($errors))
+                                <div class="container">
+                                    <div class="form-group">
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $err)
+                                                    <li>{{ $err }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                        <form class="form" action="/register" method="post">
+                            @csrf
                             <div class="form-group">
                                 <input class="form-control" id="E-mail" type="text" name="email" placeholder="Email"/>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" id="identitas" type="text" name="identitas"
-                                       placeholder="identitas (KTP/Tanda PEngenal)"/>
+                                <input class="form-control" id="identitas" type="text" name="kontak"
+                                       placeholder="Kontak"/>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" id="username" type="text" name="username"
-                                       placeholder="Username"/>
+                                <input class="form-control" id="username" type="text" name="nama"
+                                       placeholder="Nama"/>
                             </div>
                             <div class="form-group">
                                 <input class="form-control" id="password" type="password" name="password"
                                        placeholder="Password"/>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" id="re-password" type="password" name="re-password"
+                                <input class="form-control" id="re-password" type="password" name="password_confirmation"
                                        placeholder="Ulang Password"/>
                             </div>
                             <div class="form-group">
-                                <a href="/indexpenjual" class="btn btn-block btn-round btn-b">Daftar</a>
+                                <button type="submit" class="btn btn-block btn-round btn-b">Daftar</button>
                             </div>
                         </form>
                     </div>

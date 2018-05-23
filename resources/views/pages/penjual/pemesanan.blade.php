@@ -23,6 +23,7 @@
                 <div class="collapse navbar-collapse" id="custom-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#totop">Home</a></li>
+                        .
                         <li><a href="/indexpenjual">Produk</a></li>
                         <li><a href="/">Keluar</a></li>
                     </ul>
@@ -51,8 +52,9 @@
                                     <th>Total Harga</th>
                                     <th>Hapus</th>
                                 </tr>
+                                    <form  action="/tes/tambahtransaksi" method="post">
                                 @foreach($bakpaos as $bakpao)
-                                    <form name="{{$bakpao->jenis_bakpao}}">
+                                    @csrf
                                         <tr>
                                             <td class="hidden-xs"><a href="#"><img src="{{$bakpao->path_gambar}}"
                                                                                    alt="Accessories Pack"/></a></td>
@@ -66,19 +68,24 @@
                                                 <h5 class="product-title font-alt">{{$bakpao->stok_bakpao}}</h5>
                                             </td>
                                             <td>
-                                                <input class="form-control" type="number" max="{{$bakpao->stok_bakpao}}" name="{{$bakpao->jenis_bakpao}}"
-                                                       onFocus="startCalc();" onBlur="stopCalc();"/>
+                                                <input class="form-control" name="jumlah[]" type="number" max="{{$bakpao->stok_bakpao}}"    
+                                                       onFocus="startCalc();" onBlur="stopCalc();" />
                                             </td>
                                             <td>
                                                 Rp.<input readonly class="currency" type=text value='' name="harga"
                                                           readonly
                                                           style="text:bold">
                                             </td>
+                                            <input type="hidden" name="bakpao_id[]" value="{{$bakpao->id}}">
+                                            <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
                                             <td class="pr-remove"><a href="#" title="Remove"><i class="fa fa-times"></i></a>
                                             </td>
                                         </tr>
-                                    </form>
                                 @endforeach
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-block btn-round btn-b">Pesan</button>
+                                            </div>
+                                    </form>
 
                                 </tbody>
                             </table>

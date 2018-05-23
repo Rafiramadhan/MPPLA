@@ -31,10 +31,14 @@ class HomeController extends Controller
 
     public function getIndex3()
     {
-        return view('pages.admin.index3');
+
     }
     public function getIndexAdministrator()
     {
+        if(\Auth::user()->role== 'admin') 
+        return view('pages.admin.index3');
+
+        return view('pages.penjual.index_penjual');
         return view('pages.admin.index_administrator');
     }
     public function getLihatHasilJual()

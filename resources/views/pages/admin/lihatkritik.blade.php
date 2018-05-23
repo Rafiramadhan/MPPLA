@@ -88,16 +88,17 @@
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2">
                 <hr class="divider-w mt-10 mb-20">
+                @foreach($kritik_saran as $kritik)
                 <form class="form" role="form">
                   <div class="form-group">
                      <h5 class="font-alt mb-0">Nama Penjual</h5>
-                    <input class="form-control input-lg" type="text" placeholder="Satriyo"  readonly=""/>
+                    <input class="form-control input-lg" type="text" value="{{$kritik->user->nama}}"  readonly=""/>
                   </div>
                   <h5 class="font-alt mb-0">Kritik</h5>
-                  <textarea class="form-control" rows="7" placeholder="Jumlah varian bakpaonya masih sedikit"  readonly=""></textarea>
-                  <h5 class="font-alt mb-0">Saran</h5>
-                  <textarea class="form-control" rows="7" placeholder="Tambahkan varian bakpao, serta buka cabang baru"  readonly=""></textarea>
+                  <textarea class="form-control" rows="7"  readonly="">{{$kritik->isi}}</textarea>
+                  
                 </form>
+                @endforeach
                 <br>
                 
                   </div>

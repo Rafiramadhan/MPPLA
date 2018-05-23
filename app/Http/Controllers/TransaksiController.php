@@ -12,16 +12,20 @@ class TransaksiController extends Controller
     //
 	public function addTransaction(Request $request)
 	{
+		//dd($request->jumlah);
+
 		$pemesanan = Pemesanan::create([
             'user_id' => $request['user_id'],
             'status' => 0,
             'total_harga' => $request['total_harga']
         ]);
 
-        //dd($transaksi->id);
+        
 
-		for($key = 0; $key< 2; $key++){
-			$data = [
+        foreach ($request->bakpao_id as $key => $bakpao) {
+        	# 
+        	if($request->jumlah[$key] == null) continue;
+        	$data = [
 				"bakpao_id" => $request->bakpao_id[$key],
 				"jumlah" => $request->jumlah[$key],
 				"pemesanan_id" => $pemesanan->id,
@@ -32,9 +36,9 @@ class TransaksiController extends Controller
 			$bakpao = Bakpao::find($request->bakpao_id[$key]);
 			$bakpao->stok_bakpao -= $request->jumlah[$key];
 			$bakpao->save();
-		}
+        }
 
-		return $transaksi;
+		return $pemesanan;
 
 		//return ItemPemesanan::create($item_transaksi);
 	}

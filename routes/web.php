@@ -23,7 +23,7 @@ Route::get('/indexadmin','HomeController@getIndexAdministrator');
 Route::get('/indexpenjual','HomeController@getIndexPenjual');
 Route::get('/kritiksaran','HomeController@getKritikSaran');
 Route::get('/lihathasiljual','HomeController@getLihatHasilJual');
-Route::get('/lihatkritik','HomeController@getLihatKritik');
+Route::get('/lihatkritik','AdminController@getKritikSaran');
 Route::get('/logins','HomeController@getLogin');
 Route::get('/pemesanan','BakpaoController@getBakpao');
 Route::get('/penjualan','HomeController@getPenjualan');
@@ -31,7 +31,7 @@ Route::get('/tentang','HomeController@getTentang');
 Route::get('/temppemesanan', 'HomeController@getTempPemesanan');
 
 
-Route::post('tes/tambahkritik','BakpaoController@create_bakpao');
+Route::post('tambahkritik','UserController@addKritikSaran');
 Route::post('tes/liatkritik','KritiksaranController@showKritik');
 
 
@@ -39,6 +39,8 @@ Route::post('tes/tambahbakpao','BakpaoController@createBakpao');
 Route::post('tes/ubahbakpao','BakpaoController@editBakpao');
 Route::post('tes/lihatbakpao','BakpaoController@getBakpao');
 Route::post('tes/hapusbakpao','BakpaoController@deleteBakpao');
+
+
 
 Route::post('tes/tambahpenjual','UserController@createUser');
 // Route::post('tes/ubahpenjual','BakpaoController@editBakpao');
@@ -49,7 +51,13 @@ Route::post('tes/tambahtransaksi','TransaksiController@addTransaction');
 Route::post('tes/tolaktransaksi','TransaksiController@declineTransaction');
 Route::post('tes/historypenjual','TransaksiController@getUserHistoryTransaction');
 
+Route::get('tes/createdummy','UserController@createUserDummy');
+
+
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/logout', 'Auth\LoginController@logout')->name('home');

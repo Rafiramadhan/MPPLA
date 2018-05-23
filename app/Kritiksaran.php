@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class KritikSaran extends Model
 {
     protected $fillable = [
-      'user_id','isi','stok' 
+      'user_id','isi'
   ];
 
   public function user()
