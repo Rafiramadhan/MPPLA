@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\User;
 use App\UserDetail;
+use App\KritikSaran;
 
 class UserController extends Controller
 {
@@ -44,19 +45,22 @@ class UserController extends Controller
 
 	public function getUserTransactionHistory(Request $request)
 	{
-		$user = User::create([
-			'nama' => $request['nama'],
-            'kontak' => $request['kontak'],
-            'email' => $request['email'],
-            'role' => 'Penjual'
-			]);
+		
+	}
 
-		$user_detail = UserDetail::create([
+	public function addKritikSaran(Request $request)
+	{
+		$user = KritikSaran::create([
 			'user_id' => $request['user_id'],
-            'alamat' => $request['alamat'],
-            'penghasilan_bersih' => $request['penghasilan_bersih'],
-            'penghasilan_kotor' => $request['penghasilan_kotor'],
-            'admin_id' => $request['admin_id']
+            'isi' => $request['isi']
+			]);
+	}
+
+	public function addKritikSaran(Request $request)
+	{
+		$kritik_saran = KritikSaran::create([
+			'user_id' => $request['user_id'],
+            'isi' => $request['isi']
 			]);
 	}
 
