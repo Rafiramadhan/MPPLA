@@ -24,7 +24,7 @@ Route::get('/indexpenjual','HomeController@getIndexPenjual');
 Route::get('/kritiksaran','HomeController@getKritikSaran');
 Route::get('/lihathasiljual','HomeController@getLihatHasilJual');
 Route::get('/lihatkritik','HomeController@getLihatKritik');
-Route::get('/login','HomeController@getLogin');
+Route::get('/logins','HomeController@getLogin');
 Route::get('/pemesanan','BakpaoController@getBakpao');
 Route::get('/penjualan','HomeController@getPenjualan');
 Route::get('/tentang','HomeController@getTentang');
