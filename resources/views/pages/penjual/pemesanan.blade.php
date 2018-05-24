@@ -68,11 +68,11 @@
                                                 <h5 class="product-title font-alt">{{$bakpao->stok_bakpao}}</h5>
                                             </td>
                                             <td>
-                                                <input class="form-control" name="jumlah[]" type="number" max="{{$bakpao->stok_bakpao}}"    
-                                                       onFocus="startCalc();" onBlur="stopCalc();" />
+                                                <input class="form-control" onkeyup="calcu({{$bakpao->id}})" id="B{{$bakpao->id}}" data-harga = "{{$bakpao->harga_bakpao}}"  name="jumlah[]" type="number" max="{{$bakpao->stok_bakpao}}"    
+                                                />
                                             </td>
                                             <td>
-                                                Rp.<input readonly class="currency" type=text value='' name="harga"
+                                                Rp.<input readonly class="currency" type=text value='' name="harga" id="{{$bakpao->id}}" 
                                                           readonly
                                                           style="text:bold">
                                             </td>
@@ -102,7 +102,7 @@
                                         <tbody>
                                         <tr>
                                             <th>Subtotal&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</th>
-                                            <td>Rp.<input readonly class="currency" name="harga" readonly
+                                            <td>Rp.<input  class="currency" name="harga" id="fname" onkeyup="calcu()" 
                                                           style="text:bold"></td>
                                         </tr>
                                         <tr>
@@ -111,7 +111,7 @@
                                         </tr>
                                         <tr class="shop-Cart-totalprice">
                                             <th>Total&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</th>
-                                            <td>Rp.<input readonly class="currency" name="hargaf" readonly
+                                            <td>Rp.<input readonly class="currency" name="hargaf" readonly id="demo" 
                                                           style="text:bold"></td>
                                         </tr>
                                         </tbody>
@@ -142,6 +142,11 @@
 @section('scripts')
     @parent
     <script>
+
+        function calcu(bakpao){
+            document.getElementById(bakpao).value = document.getElementById('B' + bakpao).value * document.getElementById('B' + bakpao).data('harga') ;
+
+        }
         function startCalc() {
             interval = setInterval("calc()", 1);
         }
