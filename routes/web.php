@@ -65,6 +65,9 @@ Route::get('/tesnotverified', 'TransaksiController@getNotVerifiedTransaction');
 Route::get('/tesverified/{id}', 'TransaksiController@verifTransaction');
 
 
+Route::get('tesrejected/{id}','TransaksiController@declineTransaction');
+
+
 
 Auth::routes();
 

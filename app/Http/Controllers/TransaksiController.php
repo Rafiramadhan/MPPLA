@@ -63,9 +63,9 @@ class TransaksiController extends Controller
 
 
 
-	public function declineTransaction(Request $request)
+	public function declineTransaction($id)
 	{
-		$pemesanan = Pemesanan::find($request->pemesanan_id);
+		$pemesanan = Pemesanan::find($id);
 		$pemesanan->status = 3;
 
 		foreach($pemesanan->item_pemesanan as $item)
@@ -76,7 +76,7 @@ class TransaksiController extends Controller
 		}
 		$pemesanan->save();
 
-		dd("success");
+		return Redirect('verifpenjual');
 	}
 
 	public function verifTransaction($id)

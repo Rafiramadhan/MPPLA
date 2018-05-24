@@ -82,8 +82,9 @@
                                             </td>
                                             <td class="hidden-xs" style="justify-items: center">
                                                 <button><a href="tesverified/{{$item->id}}">
-                                                        Verifikasi {{$item->id}}</a></button>
-                                                <button>tolak</button>
+                                                        Verifikasi </a></button>
+                                                <button><a href="tesrejected/{{$item->id}}">
+                                                        Tolak </a></button>
                                             </td>
                                         </tr>
                                     </form>
