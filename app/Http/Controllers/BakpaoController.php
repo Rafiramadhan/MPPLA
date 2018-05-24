@@ -30,7 +30,7 @@ class BakpaoController extends Controller
                 'status_code' => 202,
                 'message' => "Bakpao berhasil dibuat");
         }
-        return \Response::json($data, 202);
+        return view('pages.admin.kelolabakpao', $data);
 
 
     }
@@ -66,7 +66,10 @@ class BakpaoController extends Controller
         $data = [
             'bakpaos' => $bakpaos
         ];
-        return view('pages.penjual.pemesanan', $data);
+        if(\Auth::user()->role== 'admin')
+            return view('pages.admin.kelolabakpao', $data);
+        else
+            return view('pages.penjual.pemesanan', $data);
     }
 
     public function deleteBakpao(Request $request)

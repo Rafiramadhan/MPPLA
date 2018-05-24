@@ -92,57 +92,6 @@
                 </div>
             </section>
             <hr class="divider-w">
-            <section class="module" id="products">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-2 col-sm-offset-5">
-                            <div class="alt-module-subtitle"><span class="holder-w"></span>
-                                <h5 class="font-serif">Rasa Khas Nusantara</h5><span class="holder-w"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2">
-                            <h2 class="module-title font-alt">Spesial Dari Kami</h2>
-                        </div>
-                    </div>
-                    <div class="row multi-columns-row">
-                        <div class="col-sm-6 col-md-3 col-lg-3">
-                            <div class="content-box">
-                                <div class="content-box-image"><img src="assets/images/restaurant/bakpaocoklat.jpg"
-                                                                    alt="Kabab"/></div>
-                                <h3 class="content-box-title font-serif">Coklat</h3>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-3">
-                            <div class="content-box">
-                                <div class="content-box-image"><img src="assets/images/restaurant/bakpaostraw.jpg"
-                                                                    alt="Limes"/></div>
-                                <h3 class="content-box-title font-serif">Strawberry</h3>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-3">
-                            <div class="content-box">
-                                <div class="content-box-image"><img src="assets/images/restaurant/bakpaokeju.jpg"
-                                                                    alt="Radish"/></div>
-                                <h3 class="content-box-title font-serif">Keju</h3>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-3">
-                            <div class="content-box">
-                                <div class="content-box-image"><img src="assets/images/restaurant/bakpaoayam.jpg"
-                                                                    alt="Corn"/></div>
-                                <h3 class="content-box-title font-serif">Ayam</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!--
-                     <div class="row mt-30">
-                      <div class="col-sm-12 align-center"><a class="btn btn-b btn-round" href="index_shop.html">Lihat Semua</a></div>
-                    </div
-                  -->>
-                </div>
-            </section>
             <section class="module module-video bg-dark-30" data-background="assets/images/restaurant/megajaya3.jpg">
                 <div class="container">
                     <div class="row">
