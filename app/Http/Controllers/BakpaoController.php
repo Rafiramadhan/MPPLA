@@ -11,7 +11,6 @@ class BakpaoController extends Controller
 
     public function createBakpao(Request $request)
     {
-
         if (Bakpao::where('jenis_bakpao', '=', $request['jenis_bakpao'])->count() > 0) {
             $data = array(
                 'data' => null,
@@ -30,8 +29,8 @@ class BakpaoController extends Controller
                 'status_code' => 202,
                 'message' => "Bakpao berhasil dibuat");
         }
-        return view('pages.admin.kelolabakpao', $data);
-
+        return redirect('kelolabakpao');
+//        return \Response::json($data, 202);
 
     }
 
@@ -66,9 +65,9 @@ class BakpaoController extends Controller
         $data = [
             'bakpaos' => $bakpaos
         ];
-        if(\Auth::user()->role== 'admin')
-            return view('pages.admin.kelolabakpao', $data);
-        else
+//        if(\Auth::user()->role== 'admin')
+//            return view('pages.admin.kelolabakpao', $data);
+//        else
             return view('pages.penjual.pemesanan', $data);
     }
 
