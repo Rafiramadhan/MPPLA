@@ -68,7 +68,7 @@
                                                 <h5 class="product-title font-alt">{{$bakpao->stok_bakpao}}</h5>
                                             </td>
                                             <td>
-                                                <input class="form-control" onkeyup="calcu({{$bakpao->id}})" id="B{{$bakpao->id}}" data-harga = "{{$bakpao->harga_bakpao}}"  name="jumlah[]" type="number" max="{{$bakpao->stok_bakpao}}"    
+                                                <input class="form-control" onkeyup="calcu({{$bakpao->id}}, {{$bakpao->harga_bakpao}})" id="B{{$bakpao->id}}" data-harga = "{{$bakpao->harga_bakpao}}"  name="jumlah[]" type="number" max="{{$bakpao->stok_bakpao}}"    
                                                 />
                                             </td>
                                             <td>
@@ -143,53 +143,22 @@
     @parent
     <script>
 
-        function calcu(bakpao){
-            document.getElementById(bakpao).value = document.getElementById('B' + bakpao).value * document.getElementById('B' + bakpao).data('harga') ;
-
+        function calcu(bakpao, harga){
+            document.getElementById(bakpao).value = document.getElementById('B' + bakpao).value * harga;
+            $(document.getElementById(bakpao)).manageCommas();
         }
         function startCalc() {
             interval = setInterval("calc()", 1);
         }
 
-        function calc() {
-            bpkeju = document.Keju.Keju.value;
-            document.Keju.harga.value = (bpkeju * 3100);
-
-            bpkh = document.Kacang_Hijau.Kacang_Hijau.value;
-            document.Kacang_Hijau.harga.value = (bpkh * 3000);
-
-            bpkt = document.Kacang_Tanah.Kacang_Tanah.value;
-            document.Kacang_Tanah.harga.value = (bpkt * 3000);
-
-            bpayam = document.Ayam.Ayam.value;
-            document.Ayam.harga.value = (bpayam * 3500);
-
-            bpcoklat = document.Coklat.Coklat.value;
-            document.Coklat.harga.value = (bpcoklat * 3100);
-
-            bpstraw = document.Strawberry.Strawberry.value;
-            document.Strawberry.harga.value = (bpstraw * 3100);
-
-            bptelo = document.Telo.Telo.value;
-            document.Telo.harga.value = (bptelo * 3000);
-
-            bplapa = document.Kelapa.Kelapa.value;
-            document.Kelapa.harga.value = (bplapa * 3000);
-
-            total = (bpkeju * 3100) + (bpkh * 3000) + (bpkt * 3000) + (bpayam * 3500) + (bpcoklat * 3100) + (bpstraw * 3100) + (bptelo * 3000) + (bplapa * 3000);
-            document.checkout.harga.value = total;
-            document.checkout.hargaf.value = (total + 1000);
-        }
-
-        function stopCalc() {
-            clearInterval(interval);
-        }
+       
     </script>
     <script>
         $(document).ready(function () {
             //apply on typing and focus
             $('input.currency').on('focus', function () {
                 $(this).manageCommas();
+                console.log("asdasd");
             });
             //then sanatize on leave
             // if sanitizing needed on form submission time,
@@ -209,8 +178,5 @@
             })
         }
 
-        $.fn.santizeCommas = function () {
-            return $(this).val($(this).val().replace(/(,| )/g, ''));
-        }
     </script>
 @endsection
