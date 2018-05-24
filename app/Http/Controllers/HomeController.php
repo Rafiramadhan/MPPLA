@@ -49,6 +49,10 @@ class HomeController extends Controller
     {
         return view('pages.admin.lihatkritik');
     }
+    public function getVerifPenjual()
+    {
+        return view('pages.admin.verifpenjual');
+    }
 
     //Penjual
 
