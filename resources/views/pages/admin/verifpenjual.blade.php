@@ -46,26 +46,48 @@
                                     <th>Email</th>
                                     <th>Kontak</th>
                                     <th>Nama</th>
-                                    <th>Status</th>
+                                    <th>Nama Bakpao</th>
+                                    <th>Jumlah</th>
                                     <th>Verifikasi</th>
                                 </tr>
+                                @foreach($pemesanans as $item)
                                 <form method="post">
                                     <tr>
-                                        <td class="hidden-xs"></td>
+                                        
                                         <td>
-                                            <h5 class="product-title font-alt"></h5>
+                                            <h5 class="product-title font-alt">{{$item->user->email}}</h5>
                                         </td>
                                         <td class="hidden-xs">
-                                            <h5 class="product-title font-alt"></h5>
+                                            <h5 class="product-title font-alt">{{$item->user->kontak}}</h5>
                                         </td>
                                         <td class="hidden-xs">
-                                            <h5 class="product-title font-alt"></h5>
+                                            <h5 class="product-title font-alt">{{$item->user->nama}}</h5>
                                         </td>
                                         <td>
-                                            <h5 class="product-tittle font-alt"></h5>
+                                            <h5 class="product-tittle font-alt">
+                                                @foreach($item->item_pemesanan as $pesanan)
+                                                {{$pesanan->bakpao->jenis_bakpao}}
+                                                <br>
+                                                @endforeach
+
+                                            </h5>
+                                        </td>
+                                        <td class="hidden-xs">
+                                            <h5 class="product-tittle font-alt">
+                                                @foreach($item->item_pemesanan as $pesanan)
+                                                {{$pesanan->jumlah}}
+                                                <br>
+                                                @endforeach
+                                                
+                                            </h5>
+                                        </td>
+                                        <td class="hidden-xs">
+                                            <button>Verifikasi </button>
+                                            <button>tolak </button>
                                         </td>
                                     </tr>
                                 </form>
+                                @endforeach
 
                                 </tbody>
                             </table>

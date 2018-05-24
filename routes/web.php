@@ -25,7 +25,7 @@ Route::get('/kritiksaran','HomeController@getKritikSaran');
 Route::get('/lihathasiljual','HomeController@getLihatHasilJual');
 Route::get('/lihatkritik','AdminController@getKritikSaran');
 Route::get('/logins','HomeController@getLogin');
-Route::get('/verifpenjual','HomeController@getVerifPenjual');
+Route::get('/verifpenjual','TransaksiController@getNotVerifiedTransaction');
 Route::get('/pemesanan','BakpaoController@getBakpao');
 Route::get('/penjualan','HomeController@getPenjualan');
 Route::get('/tentang','HomeController@getTentang');
@@ -57,7 +57,7 @@ Route::get('tes/createdummy','UserController@createUserDummy');
 
 
 Route::get('/tesnotverified', 'TransaksiController@getNotVerifiedTransaction');
-Route::post('/tesverified', 'TransaksiController@verifTransaction');
+Route::get('/tesverified/{id}', 'TransaksiController@verifTransaction');
 
 
 

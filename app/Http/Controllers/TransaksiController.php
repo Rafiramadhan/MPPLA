@@ -58,23 +58,9 @@ class TransaksiController extends Controller
 		$data = [
             'pemesanans' => $pemesanans
         ];
-        return view('home', $data);
+        return view('pages.admin.verifpenjual', $data);
 	}
 
-	public function verifyTransaction(Request $request)
-	{
-		$pemesanan = Pemesanan::find($request->id);
-		$pemesanan->status = '1' ;
-
-		// foreach($pemesanan->item_pemesanan as $item)
-		// {
-		// 	$bakpao = Bakpao::find($item->bakpao_id);
-		// 	$bakpao->stok_bakpao -= $item->jumlah;
-		// 	$bakpao->save(); 
-		// }
-		dd(Bakpao::get());
-        return view('home', $data);
-	}
 
 
 	public function declineTransaction(Request $request)
@@ -93,9 +79,9 @@ class TransaksiController extends Controller
 		dd("success");
 	}
 
-	public function verifTransaction(Request $request)
+	public function verifTransaction($id)
 	{
-		$pemesanan = Pemesanan::find($request->pemesanan_id);
+		$pemesanan = Pemesanan::find($id);
 		$pemesanan->status = 1;
 		$pemesanan->save();
 
