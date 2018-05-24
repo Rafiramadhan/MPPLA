@@ -53,13 +53,13 @@
                                 @foreach($pemesanans as $item)
                                     <form method="post">
                                         <tr>
-                                            <td>
+                                            <td width="20%">
                                                 <a class="block product-title font-alt">{{$item->user->email}}</a>
                                             </td>
-                                            <td class="hidden-xs">
+                                            <td width="10%" class="hidden-xs">
                                                 <h5 class="product-title font-alt">{{$item->user->kontak}}</h5>
                                             </td>
-                                            <td class="hidden-xs">
+                                            <td width="25%" class="hidden-xs">
                                                 <h5 class="product-title font-alt">{{$item->user->nama}}</h5>
                                             </td>
                                             <td>
