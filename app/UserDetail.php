@@ -10,8 +10,10 @@ class UserDetail extends Model
       'user_id','alamat','penghasilan_bersih','penghasilan_kotor','admin_id' 
   ];
 
-  public function user()
+  	public function user()
   	{
   		return $this->belongsTo('App/User');
   	}
+
+
 }

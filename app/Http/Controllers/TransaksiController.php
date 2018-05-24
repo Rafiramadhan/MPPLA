@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Bakpao;
 use App\Pemesanan;
+use App\User;
 use App\ItemPemesanan;
+use App\UserDetail;
+
 
 class TransaksiController extends Controller
 {
@@ -43,6 +46,37 @@ class TransaksiController extends Controller
 		//return ItemPemesanan::create($item_transaksi);
 	}
 
+	public function getNotVerifiedTransaction()
+	{
+		// $pemesanans = ItemPemesanan::whereHas('pemesanan',function ($q){
+		// 				   $q->where('status', '0');
+		// 				})->get();
+
+		$pemesanans = Pemesanan::where('status', '0')->get();
+
+
+		$data = [
+            'pemesanans' => $pemesanans
+        ];
+        return view('home', $data);
+	}
+
+	public function verifyTransaction(Request $request)
+	{
+		$pemesanan = Pemesanan::find($request->id);
+		$pemesanan->status = '1' ;
+
+		// foreach($pemesanan->item_pemesanan as $item)
+		// {
+		// 	$bakpao = Bakpao::find($item->bakpao_id);
+		// 	$bakpao->stok_bakpao -= $item->jumlah;
+		// 	$bakpao->save(); 
+		// }
+		dd(Bakpao::get());
+        return view('home', $data);
+	}
+
+
 	public function declineTransaction(Request $request)
 	{
 		$pemesanan = Pemesanan::find($request->pemesanan_id);
@@ -64,6 +98,19 @@ class TransaksiController extends Controller
 		$pemesanan = Pemesanan::find($request->pemesanan_id);
 		$pemesanan->status = 1;
 		$pemesanan->save();
+
+		$total_bakpao = 0;
+		foreach ($pemesanan->item_pemesanan as $item) {
+			$total_bakpao += $item->jumlah;
+		}
+
+		$pajak = $total_bakpao * 500;
+	
+		$user = UserDetail::where('user_id',$pemesanan->user_id)->first();
+
+		$user->penghasilan_kotor += $pemesanan->total_harga;
+		$user->penghasilan_bersih += ($user->penghasilan_kotor - $pajak);
+		$user->save();
 		dd("success");
 	}
 
@@ -72,6 +119,8 @@ class TransaksiController extends Controller
 		$pemesanan = Pemesanan::where('user_id', '=', $request['user_id'])->get();
 		dd($pemesanan->item_pemesanan);
 	}
+
+	
 
 
 

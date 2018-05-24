@@ -55,6 +55,10 @@ Route::get('tes/createdummy','UserController@createUserDummy');
 
 
 
+Route::get('/tesnotverified', 'TransaksiController@getNotVerifiedTransaction');
+Route::post('/tesverified', 'TransaksiController@verifTransaction');
+
+
 
 Auth::routes();
 
