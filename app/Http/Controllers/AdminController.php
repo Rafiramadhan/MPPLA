@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\KritikSaran;
+use App\Pemesanan;
+use App\ItemPemesanan;
 
 class AdminController extends Controller
 {
@@ -17,6 +19,13 @@ class AdminController extends Controller
 
 
 		return view('pages.admin.lihatkritik', $data);
+	}
+
+	public function getAllTransaction()
+	{
+		$pemesanan = Pemesanan::get();
+
+		return dd($pemesanan);
 	}
 
 

@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\User;
 use App\UserDetail;
 use App\KritikSaran;
+use App\Pemesanan;
+use Auth;
 
 class UserController extends Controller
 {
@@ -63,9 +65,13 @@ class UserController extends Controller
 		return dd("success");
 	}
 
-	public function getUserTransactionHistory(Request $request)
+	public function getUserTransactionHistory()
 	{
-		
+		$transaction = Pemesanan::where("user_id", Auth::User()->id)->get();
+		dd($transaction);
+		dd(Auth::User()->id);
+
+		return dd($transaction);
 	}
 
 	public function addKritikSaran(Request $request)
