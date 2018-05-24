@@ -97,7 +97,8 @@ class TransaksiController extends Controller
 		$user->penghasilan_kotor += $pemesanan->total_harga;
 		$user->penghasilan_bersih += ($user->penghasilan_kotor - $pajak);
 		$user->save();
-		dd("success");
+		
+		return Redirect('verifpenjual');
 	}
 
 	public function getUserHistoryTransaction(Request $request)

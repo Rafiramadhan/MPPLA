@@ -82,7 +82,7 @@
                                             </h5>
                                         </td>
                                         <td class="hidden-xs">
-                                            <button>Verifikasi </button>
+                                            <button><a href="tesverified/{{$item->id}}"> Verifikasi {{$item->id}}</a></button>
                                             <button>tolak </button>
                                         </td>
                                     </tr>
