@@ -73,7 +73,7 @@
               <li><a href="#totop">Beranda</a></li>
               <li><a class="section-scroll" href="#services">Pelayanan</a></li>
               <li><a class="section-scroll" href="#products">Produk</a></li>
-              <li><a href="/indexadmin">Halaman Admin</a></li>
+              <li><a href="/verifpenjual">Verif Penjual</a></li>
               <li><a href="/">Keluar</a></li>
             </ul>
           </div>
