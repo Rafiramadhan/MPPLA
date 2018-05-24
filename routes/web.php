@@ -47,6 +47,8 @@ Route::post('tes/hapusbakpao','BakpaoController@deleteBakpao');
 
 
 Route::post('tes/tambahpenjual','UserController@createUser');
+Route::get('tes/gethistory','UserController@getUserTransactionHistory');
+Route::get('tes/getallhistory','AdminController@getAllTransaction');
 // Route::post('tes/ubahpenjual','BakpaoController@editBakpao');
 // Route::post('tes/lihatpenjual','BakpaoController@getBakpao');
 // Route::post('tes/hapuspenjual','BakpaoController@deleteBakpao');

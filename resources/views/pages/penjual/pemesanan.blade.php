@@ -68,13 +68,13 @@
                                                 <h5 class="product-title font-alt">{{$bakpao->stok_bakpao}}</h5>
                                             </td>
                                             <td>
-                                                <input class="form-control" onkeyup="calcu({{$bakpao->id}}, {{$bakpao->harga_bakpao}})" id="B{{$bakpao->id}}" data-harga = "{{$bakpao->harga_bakpao}}"  name="jumlah[]" type="number" max="{{$bakpao->stok_bakpao}}"    
+                                                <input class="form-control" onkeyup="calcu({{$bakpao->id}}, {{$bakpao->harga_bakpao}})" id="B{{$bakpao->id}}" data-harga = "{{$bakpao->harga_bakpao}}"  name="jumlah[]" type="number" max="{{$bakpao->stok_bakpao}}"   value="0" 
                                                 />
                                             </td>
                                             <td>
-                                                Rp.<input readonly class="currency" type=text value='' name="harga" id="{{$bakpao->id}}" 
+                                                Rp.<input readonly class="currency" type=text name="harga" id="{{$bakpao->id}}" 
                                                           readonly
-                                                          style="text:bold">
+                                                          style="text:bold" value="0">
                                             </td>
                                             <input type="hidden" name="bakpao_id[]" value="{{$bakpao->id}}">
                                             <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
@@ -102,7 +102,7 @@
                                         <tbody>
                                         <tr>
                                             <th>Subtotal&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</th>
-                                            <td>Rp.<input  class="currency" name="harga" id="fname" onkeyup="calcu()" 
+                                            <td>Rp.<input  class="currency" name="harga" id="subtotal" onkeyup="calcu()" 
                                                           style="text:bold"></td>
                                         </tr>
                                         <tr>
@@ -111,8 +111,8 @@
                                         </tr>
                                         <tr class="shop-Cart-totalprice">
                                             <th>Total&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</th>
-                                            <td>Rp.<input readonly class="currency" name="hargaf" readonly id="demo" 
-                                                          style="text:bold"></td>
+                                            <td>Rp.<input readonly class="currency" name="harga" readonly id="total" 
+                                                          style="text:bold" value="0"></td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -145,7 +145,22 @@
 
         function calcu(bakpao, harga){
             document.getElementById(bakpao).value = document.getElementById('B' + bakpao).value * harga;
+            
+            subTotal();
             $(document.getElementById(bakpao)).manageCommas();
+        }
+        function subTotal(){
+            var total = parseInt("0");
+            console.log("masuk");
+            @foreach($bakpaos as $bakpao)
+                var harga = parseInt(document.getElementById('{{$bakpao->id}}').value) * '{{$bakpao->harga_bakpao}}';
+                console.log(harga);
+                total +=parseInt(harga);
+                
+            @endforeach
+            console.log(total);
+            document.getElementById('subtotal').value = total;
+            $(document.getElementById('subtotal')).manageCommas();
         }
         function startCalc() {
             interval = setInterval("calc()", 1);
