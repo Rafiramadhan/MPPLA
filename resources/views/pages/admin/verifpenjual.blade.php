@@ -51,42 +51,42 @@
                                     <th>Verifikasi</th>
                                 </tr>
                                 @foreach($pemesanans as $item)
-                                <form method="post">
-                                    <tr>
-                                        
-                                        <td>
-                                            <h5 class="product-title font-alt">{{$item->user->email}}</h5>
-                                        </td>
-                                        <td class="hidden-xs">
-                                            <h5 class="product-title font-alt">{{$item->user->kontak}}</h5>
-                                        </td>
-                                        <td class="hidden-xs">
-                                            <h5 class="product-title font-alt">{{$item->user->nama}}</h5>
-                                        </td>
-                                        <td>
-                                            <h5 class="product-tittle font-alt">
-                                                @foreach($item->item_pemesanan as $pesanan)
-                                                {{$pesanan->bakpao->jenis_bakpao}}
-                                                <br>
-                                                @endforeach
+                                    <form method="post">
+                                        <tr>
+                                            <td>
+                                                <a class="block product-title font-alt">{{$item->user->email}}</a>
+                                            </td>
+                                            <td class="hidden-xs">
+                                                <h5 class="product-title font-alt">{{$item->user->kontak}}</h5>
+                                            </td>
+                                            <td class="hidden-xs">
+                                                <h5 class="product-title font-alt">{{$item->user->nama}}</h5>
+                                            </td>
+                                            <td>
+                                                <h5 class="product-tittle font-alt">
+                                                    @foreach($item->item_pemesanan as $pesanan)
+                                                        {{$pesanan->bakpao->jenis_bakpao}}
+                                                        <br>
+                                                    @endforeach
 
-                                            </h5>
-                                        </td>
-                                        <td class="hidden-xs">
-                                            <h5 class="product-tittle font-alt">
-                                                @foreach($item->item_pemesanan as $pesanan)
-                                                {{$pesanan->jumlah}}
-                                                <br>
-                                                @endforeach
-                                                
-                                            </h5>
-                                        </td>
-                                        <td class="hidden-xs">
-                                            <button><a href="tesverified/{{$item->id}}"> Verifikasi {{$item->id}}</a></button>
-                                            <button>tolak </button>
-                                        </td>
-                                    </tr>
-                                </form>
+                                                </h5>
+                                            </td>
+                                            <td class="hidden-xs">
+                                                <h5 class="product-tittle font-alt">
+                                                    @foreach($item->item_pemesanan as $pesanan)
+                                                        {{$pesanan->jumlah}}
+                                                        <br>
+                                                    @endforeach
+
+                                                </h5>
+                                            </td>
+                                            <td class="hidden-xs" style="justify-items: center">
+                                                <button><a href="tesverified/{{$item->id}}">
+                                                        Verifikasi {{$item->id}}</a></button>
+                                                <button>tolak</button>
+                                            </td>
+                                        </tr>
+                                    </form>
                                 @endforeach
 
                                 </tbody>

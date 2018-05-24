@@ -39,11 +39,14 @@ class HomeController extends Controller
         return view('pages.admin.index3');
 
         return view('pages.penjual.index_penjual');
-        return view('pages.admin.index_administrator');
     }
     public function getLihatHasilJual()
     {
         return view('pages.admin.lihathasiljual');
+    }
+    public function getTambahBakpao()
+    {
+        return view('pages.admin.tambahbakpao');
     }
     public function getLihatKritik()
     {

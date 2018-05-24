@@ -29,6 +29,7 @@
         <!-- Main stylesheet and color file-->
         <link href="assets/css/style.css" rel="stylesheet">
         <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
+        {{--<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">--}}
     @show
 </head>
 <!-- End Head -->
@@ -60,6 +61,10 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK2Axt8xiFYMBMDwwG1XzBQvEbYpzCvFU"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!--===============JQuery===============-->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 @show
 
