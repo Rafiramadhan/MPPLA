@@ -101,7 +101,7 @@ public function getSpecificPenjual($id)
 
     public function getAllPenjual(Request $request)
     {
-        $user = User::get();
+        $user = User::where('role', 'Penjual')->get();
         $data = [
             'user' => $user
         ];
