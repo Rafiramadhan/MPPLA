@@ -60,6 +60,10 @@ class HomeController extends Controller
     {
         return view('pages.admin.tambahpenjual');
     }
+    public function getKelolaPenjual()
+    {
+        return view('pages.admin.kelolapenjual');
+    }
 
     //Penjual
 

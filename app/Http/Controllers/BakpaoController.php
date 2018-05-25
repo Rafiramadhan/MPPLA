@@ -44,6 +44,7 @@ class BakpaoController extends Controller
 
     public function editBakpao(Request $request)
     {
+//        dd($request["jenis_bakpao"]);
 
         if (Bakpao::where('jenis_bakpao', '=', $request['jenis_bakpao'])->count() < 0) {
             $data = array(
@@ -52,17 +53,12 @@ class BakpaoController extends Controller
                 'message' => "Bakpao tidak ditemukan");
 
         } else {
-
-            $bakpao = Bakpao::where('jenis_bakpao', '=', $request['jenis_bakpao'])->update([
-                'jenis_bakpao' => $request['jenis_bakpao'],
-                'harga_bakpao' => $request['harga_bakpao'],
-                'path_gambar' => $request['path_gambar'],
-                'stok_bakpao' => $request['stok_bakpao']
-            ]);
-            $data = array(
-                'data' => null,
-                'status_code' => 202,
-                'message' => "Bakpao berhasil diubah");
+            $bakpao = Bakpao::find($request['id']);
+            if($request['jenis_bakpao'] != null) $bakpao->jenis_bakpao = $request['jenis_bakpao'];
+            if($request['harga_bakpao'] != null) $bakpao->harga_bakpao = $request['harga_bakpao'];
+            if($request['path_gambar'] != null) $bakpao->path_gambar = $request['path_gambar'];
+            if($request['stok_bakpao'] != null) $bakpao->stok_bakpao = $request['stok_bakpao'];
+            $bakpao->save();
         }
         
          return redirect('kelolabakpao');

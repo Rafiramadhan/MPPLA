@@ -34,7 +34,7 @@ Route::get('/penjualan','HomeController@getPenjualan');
 Route::get('/tentang','HomeController@getTentang');
 Route::get('/temppemesanan', 'HomeController@getTempPemesanan');
 Route::get('/tambahpenjual', 'HomeController@getTambahPenjual');
-
+Route::get('/kelolapenjual', 'UserController@getAllPenjual');
 
 Route::post('tambahkritik','UserController@addKritikSaran');
 Route::post('tes/liatkritik','KritiksaranController@showKritik');
@@ -62,8 +62,10 @@ Route::get('tes/createdummy','UserController@createUserDummy');
 Route::post('createpenjual','UserController@createPenjual');
 Route::get('deletebakpao/{id}','BakpaoController@deleteBakpao');
 Route::get('formeditbakpao/{id}','BakpaoController@getSpecificBakpao');
+Route::get('formeditpenjual/{id}','UserController@getSpecificPenjual');
 
 Route::post('editbakpao','BakpaoController@editBakpao');
+Route::post('editpenjual','UserController@editPenjual');
 
 
 

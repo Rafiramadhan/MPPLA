@@ -84,6 +84,28 @@ class UserController extends Controller
 		return redirect('/indexadmin');
 	}
 
+    public function getAllPenjual(Request $request)
+    {
+        $user = User::get();
+        $data = [
+            'user' => $user
+        ];
+
+        return view('pages.admin.kelolapenjual',$data);
+    }
+
+    public function getSpecificPenjual($id)
+    {
+        $user = User::find($id);
+        $data = [
+            'penjual' => $user
+        ];
+        //masukin nama bladenya
+
+        return view('pages.admin.editpenjual', $data);
+
+    }
+
 	public function createPenjual(Request $request)
 	{
 		$user = User::create([
@@ -104,5 +126,29 @@ class UserController extends Controller
 		return Redirect('indexadmin');
 	}
 
+    public function editPenjual(Request $request)
+    {
+//        dd($request["jenis_bakpao"]);
+
+        if (User::where('nama', '=', $request['nama'])->count() < 0) {
+            $data = array(
+                'data' => null,
+                'status_code' => 202,
+                'message' => "User tidak ditemukan");
+
+        } else {
+            $user = User::find($request['id']);
+            if($request['nama'] != null) $user->nama = $request['nama'];
+            if($request['kontak'] != null) $user->kontak = $request['kontak'];
+            if($request['email'] != null) $user->email = $request['email'];
+            if($request['password'] != null) $user->stok_bakpao = $request['password'];
+            $user->save();
+        }
+
+        return redirect('kelolapenjual');
+    }
+
 
 }
+
+

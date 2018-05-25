@@ -17,7 +17,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3">
-                            <h1 class="module-title font-alt mb-0">Tambah Varian Bakpao Baru</h1>
+                            <h1 class="module-title font-alt mb-0">Ganti Biodata Penjual</h1>
                         </div>
                     </div>
                 </div>
@@ -27,25 +27,21 @@
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2">
                             <hr class="divider-w mt-10 mb-20">
-                            <form action="/editbakpao" method="post" enctype="multipart/form-data">
+                            <form action="/editpenjual" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div>
-                                    <input type="hidden" name="id" value="{{$bakpaos->id}}"/>
+                                    <input type="hidden" name="id" value="{{$penjual->id}}"/>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control input-lg" name="jenis_bakpao" type="text"
-                                   placeholder="Jenis Bakpao" value="{{$bakpaos->jenis_bakpao}}"/>
+                                    <input class="form-control input-lg" name="nama" type="text"
+                                   placeholder="Jenis Bakpao" value="{{$penjual->nama}}"/>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" type="text" name="harga_bakpao" placeholder="Harga Bakpao" value="{{$bakpaos->harga_bakpao}}"/>
+                                    <input class="form-control" type="text" name="kontak" placeholder="Harga Bakpao" value="{{$penjual->kontak}}"/>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control input-sm" name="stok_bakpao" type="text"
-                                           placeholder="Stok Bakpao" value="{{$bakpaos->stok_bakpao}}"/>
-                                </div>
-                                <div>
-                                    <input class="form-control input-sm" name="path_gambar" type="file" accept="image/*"
-                                           placeholder="Gambar Bakpao" value="{{$bakpaos->path_gambar}}">
+                                    <input class="form-control input-sm" name="email" type="text"
+                                           placeholder="Stok Bakpao" value="{{$penjual->email}}"/>
                                 </div>
                                 <br>
                                 <div class="form-group">
