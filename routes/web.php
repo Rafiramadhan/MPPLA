@@ -16,7 +16,9 @@
 //});
 
 Route::get('/', 'HomeController@index');
+
 Route::get('/hasiljual','HomeController@getHasilJual');
+Route::post('/addlocation','UserController@addLocation');
 Route::get('index2','HomeController@getIndex2');
 Route::get('/index3','HomeController@getIndex3');
 Route::get('/indexadmin','HomeController@getIndexAdministrator');

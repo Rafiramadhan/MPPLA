@@ -9,17 +9,20 @@ use App\UserDetail;
 use App\KritikSaran;
 use App\Pemesanan;
 use Auth;
+use App\Location;
 
 class UserController extends Controller
 {
     
     public function addLocation(Request $request)
 	{
-		return Location::create([
+		Location::create([
             'user_id' => $request['user_id'],
             'user_latitude' => $request['user_latitude'],
             'user_longitude' => $request['user_longitude']
         ]);
+
+        return Redirect('penjualan');
 	}
 
 	public function getUserLocation(Request $request)

@@ -21,7 +21,7 @@ class User extends Authenticatable
   	}
   	public function location()
   	{
-  		return $this->hasOne('App\Location', 'id', ' user_id');
+  		return $this->hasMany('App\Location', 'id', ' user_id');
   	}
   	public function kritik_saran()
   	{

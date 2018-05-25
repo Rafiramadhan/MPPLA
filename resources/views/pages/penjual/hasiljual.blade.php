@@ -103,7 +103,7 @@
                       </td>
                       
                       <td>
-                        <h5 class="product-title font-alt">Rp.830.000</h5>
+                        <h5 class="product-title font-alt">Rp. {{Auth::user()->penghasilan_bersih}}</h5>
                       </td>
                       
                       <td>

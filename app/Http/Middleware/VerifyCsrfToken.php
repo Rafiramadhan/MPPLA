@@ -22,6 +22,7 @@ class VerifyCsrfToken extends Middleware
           'tes/tolaktransaksi',
           'tes/historypenjual',
           'tes/tambahpenjual',
-          'tesverified'
+          'tesverified',
+          'addlocation'
     ];
 }
