@@ -67,6 +67,17 @@ class BakpaoController extends Controller
         return \Response::json($data, 202);
     }
 
+    public function getSpecificBakpao($id)
+    {
+        $bakpao = Bakpao::find($id);
+        $data = [
+            'bakpaos' => $bakpao
+        ];
+        //masukin nama bladenya
+        return view('pages.admin.kelolabakpao', $data);
+        
+    }
+
     public function getBakpao(Request $request)
     {
         $bakpaos = Bakpao::get();

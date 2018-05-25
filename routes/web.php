@@ -61,6 +61,9 @@ Route::get('tes/historypenjual','TransaksiController@getUserHistoryTransaction')
 Route::get('tes/createdummy','UserController@createUserDummy');
 Route::post('createpenjual','UserController@createPenjual');
 Route::get('deletebakpao/{id}','BakpaoController@deleteBakpao');
+Route::get('formeditbakpao/{id}','BakpaoController@getSpecificBakpao');
+
+
 
 
 
