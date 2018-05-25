@@ -72,7 +72,7 @@
                                 </form>
 
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-block btn-round btn-b"><a href="/tambahbakpao">Tambah Bakpao</a>
+                                    <button type="submit" class="btn btn-block btn-round btn-b"><a href="/tambahbakpao" style="color:white">Tambah Bakpao</a>
                                     </button>
                                 </div>
 
