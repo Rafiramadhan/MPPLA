@@ -56,7 +56,7 @@
                                 @foreach($bakpaos as $bakpao)
                                     @csrf
                                         <tr>
-                                            <td class="hidden-xs"><a href="#"><img src="{{$bakpao->path_gambar}}"
+                                            <td class="hidden-xs"><a href="#"><img src="assets/images/shop/{{$bakpao->path_gambar}}"
                                                                                    alt="Accessories Pack"/></a></td>
                                             <td>
                                                 <h5 class="product-title font-alt">{{$bakpao->jenis_bakpao}}</h5>

@@ -54,7 +54,7 @@
                                     @foreach($bakpaos as $bakpao)
                                         @csrf
                                         <tr>
-                                            <td class="hidden-xs"><a href="#"><img src="{{$bakpao->path_gambar}}"
+                                            <td class="hidden-xs"><a href="#"><img src="assets/images/shop/{{$bakpao->path_gambar}}"
                                                                                    alt="Accessories Pack"/></a></td>
                                             <td>
                                                 <h5 class="product-title font-alt">{{$bakpao->jenis_bakpao}}</h5>
@@ -71,11 +71,12 @@
                                             </td>
                                         </tr>
                                     @endforeach
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-block btn-round btn-b">Tambah Bakpao
-                                        </button>
-                                    </div>
                                 </form>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-block btn-round btn-b"><a href="/tambahbakpao">Tambah Bakpao</a>
+                                    </button>
+                                </div>
 
                                 </tbody>
                             </table>

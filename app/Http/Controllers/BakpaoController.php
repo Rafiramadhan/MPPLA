@@ -16,7 +16,7 @@ class BakpaoController extends Controller
         $foto = $request['path_gambar'];
         $path = $foto->getClientOriginalName();
         //dd($path);
-        $foto->move('images', $foto->getClientOriginalName());
+        $foto->move('assets/images/shop', $foto->getClientOriginalName());
 
         if (Bakpao::where('jenis_bakpao', '=', $request['jenis_bakpao'])->count() > 0) {
             $data = array(
@@ -73,9 +73,9 @@ class BakpaoController extends Controller
         $data = [
             'bakpaos' => $bakpaos
         ];
-//        if(\Auth::user()->role== 'admin')
-//            return view('pages.admin.kelolabakpao', $data);
-//        else
+        if(\Auth::user()->role== 'admin')
+            return view('pages.admin.kelolabakpao', $data);
+        else
             return view('pages.penjual.pemesanan', $data);
     }
 
