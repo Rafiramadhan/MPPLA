@@ -22,10 +22,8 @@
                 </div>
                 <div class="collapse navbar-collapse" id="custom-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#totop">Home</a></li>
-                        .
-                        <li><a href="/indexpenjual">Produk</a></li>
-                        <li><a href="/">Keluar</a></li>
+                        <li><a href="{{'/'}}">Home</a></li>
+                        <li><a href="{{'logout'}}">Keluar</a></li>
                     </ul>
                 </div>
             </div>
@@ -72,7 +70,7 @@
                                 </form>
 
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-block btn-round btn-b"><a href="/tambahbakpao" style="color:white">Tambah Bakpao</a>
+                                    <button type="submit" class="btn btn-block btn-round btn-b"><a href="/tambahpenjual" style="color:white">Tambah Penjual</a>
                                     </button>
                                 </div>
 

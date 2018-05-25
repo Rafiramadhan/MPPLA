@@ -22,10 +22,8 @@
                 </div>
                 <div class="collapse navbar-collapse" id="custom-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#totop">Home</a></li>
-                        .
-                        <li><a href="/indexpenjual">Produk</a></li>
-                        <li><a href="/">Keluar</a></li>
+                        <li><a href="{{'/'}}">Home</a></li>
+                        <li><a href="{{'logout'}}">Keluar</a></li>
                     </ul>
                 </div>
             </div>
@@ -54,10 +52,13 @@
                                     @foreach($bakpaos as $bakpao)
                                         @csrf
                                         <tr>
-                                            <td class="hidden-xs"><a href="#"><img src="assets/images/shop/{{$bakpao->path_gambar}}"
-                                                                                   alt="Accessories Pack"/></a></td>
+                                            <td class="hidden-xs"><a href="#"><img
+                                                            src="assets/images/shop/{{$bakpao->path_gambar}}"
+                                                            alt="Accessories Pack"/></a></td>
                                             <td>
-                                                <h5 class="product-title font-alt"><a href="formeditbakpao/{{$bakpao->id}}">{{$bakpao->jenis_bakpao}}</a></h5>
+                                                <h5 class="product-title font-alt"><a
+                                                            href="formeditbakpao/{{$bakpao->id}}">{{$bakpao->jenis_bakpao}}</a>
+                                                </h5>
                                             </td>
                                             <td class="hidden-xs">
                                                 <h5 class="product-title font-alt">Rp.{{$bakpao->harga_bakpao}}</h5>
@@ -67,14 +68,17 @@
                                             </td>
                                             <input type="hidden" name="bakpao_id[]" value="{{$bakpao->id}}">
                                             <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
-                                            <td class="pr-remove"><a href="deletebakpao/{{$bakpao->id}}" title="Remove"><i class="fa fa-times"></i></a>
+                                            <td class="pr-remove"><a href="deletebakpao/{{$bakpao->id}}" title="Remove"><i
+                                                            class="fa fa-times"></i></a>
                                             </td>
                                         </tr>
                                     @endforeach
                                 </form>
 
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-block btn-round btn-b"><a href="/tambahbakpao" style="color:white">Tambah Bakpao</a>
+                                    <button type="submit" class="btn btn-block btn-round btn-b"><a href="/tambahbakpao"
+                                                                                                   style="color:white">Tambah
+                                            Bakpao</a>
                                     </button>
                                 </div>
 
@@ -82,28 +86,6 @@
                             </table>
                         </div>
                     </div>
-                    {{--<div id="popup">--}}
-                        {{--<div data-role="main" class="ui-content">--}}
-                            {{--<a href="#myPopup" data-rel="popup"--}}
-                               {{--class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Show Popup--}}
-                                {{--Form</a>--}}
-
-                            {{--<div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">--}}
-                                {{--<form method="post" action="/action_page_post.php">--}}
-                                    {{--<div>--}}
-                                        {{--<h3>Login information</h3>--}}
-                                        {{--<label for="usrnm" class="ui-hidden-accessible">Username:</label>--}}
-                                        {{--<input type="text" name="user" id="usrnm" placeholder="Username">--}}
-                                        {{--<label for="pswd" class="ui-hidden-accessible">Password:</label>--}}
-                                        {{--<input type="password" name="passw" id="pswd" placeholder="Password">--}}
-                                        {{--<label for="log">Keep me logged in</label>--}}
-                                        {{--<input type="checkbox" name="login" id="log" value="1" data-mini="true">--}}
-                                        {{--<input type="submit" data-inline="true" value="Log in">--}}
-                                    {{--</div>--}}
-                                {{--</form>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
                 </div>
             </section>
             <div class="module-small bg-dark">
@@ -133,14 +115,14 @@
             })
         }
         var marker = new google.maps.Marker({
-                    position: mkr,
-                    icon: image,
-                    title: 'Penjual X',
-                    infoWindow: {
-                        content: '<p><strong>X</strong><br/>Jln Keputih<br/>P: (+628) 56-8765-9876</p>'
-                    },
-                    map: map,
-                });
+            position: mkr,
+            icon: image,
+            title: 'Penjual X',
+            infoWindow: {
+                content: '<p><strong>X</strong><br/>Jln Keputih<br/>P: (+628) 56-8765-9876</p>'
+            },
+            map: map,
+        });
 
     </script>
 @endsection
