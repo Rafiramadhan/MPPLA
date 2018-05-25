@@ -83,10 +83,45 @@
               </div>
             </div>
           </div>
+
         </section>
+
          <div class="container">
             <div class="row">
-              <div class="col-sm-8 col-sm-offset-2">
+              <div class="col-sm-12">
+                            <table class="table table-striped table-border checkout-table">
+                                <tbody>
+                                <tr>
+                                    <th class="hidden-xs">ID</th>
+                                    <th>Nama Penjual</th>
+                                    <th>Kritik dan Saran</th>
+                                </tr>
+                                  
+                                @foreach($kritik_saran as $kritik)
+                                  
+                                        <tr>
+                                            <td>
+                                                <h5 class="product-title font-alt">{{$kritik->user->id}}</h5>
+                                            </td>
+                                            <td class="hidden-xs">
+                                                <h5 class="product-title font-alt">{{$kritik->user->nama}}</h5>
+                                            </td>
+                                            <td class="hidden-xs">
+                                                <h5 class="product-title font-alt">{{$kritik->isi}}</h5>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                            </td>
+                                        
+                                        </tr>
+                                @endforeach
+                                    
+
+                                </tbody>
+                            </table>
+                        </div>
+              <!-- <div class="col-sm-8 col-sm-offset-2">
                 <hr class="divider-w mt-10 mb-20">
                 @foreach($kritik_saran as $kritik)
                 <form class="form" role="form">
@@ -102,7 +137,7 @@
                 <br>
                 
                   </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </section>

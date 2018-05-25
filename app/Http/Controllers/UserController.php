@@ -60,7 +60,7 @@ class UserController extends Controller
             'alamat' => 'bme timur',
             // 'penghasilan_bersih' => $request['penghasilan_bersih'],
             // 'penghasilan_kotor' => $request['penghasilan_kotor'],
-            'admin_id' => '7'
+            'admin_id' => '11'
 			]);
 		return dd("success");
 	}
