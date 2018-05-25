@@ -80,7 +80,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h1 class="module-title font-alt">Hasil Penjualan</h1>
+                <h1 class="module-title font-alt">History Penjualan</h1>
               </div>
             </div>
             <hr class="divider-w pt-20">
@@ -90,27 +90,46 @@
                   <tbody>
                     <tr>
                       <th>Nama</th>
-                      <th>Jumlah Terjual</th>
-                      <th>Penghasilan Kotor</th>
-                      <th>Penghasila Bersih</th>
+                      <th>Jenis Bakpao</th>
+                      <th>Jumlah</th>
+                      <th>Harga</th>
                     </tr>
+                    @foreach($pemesanans as $transaksi)
                     <tr>
+                        
                       <td>
-                        <h5 class="product-title font-alt">Satriyo</h5>
+                        <h5 class="product-title font-alt">{{$transaksi->user->nama}}</h5>
                       </td>
                       <td class="hidden-xs">
-                        <h5 class="product-title font-alt">40 keju, 20 Coklat</h5>
+                      <h5 class="product-tittle font-alt">
+                                                    @foreach($transaksi->item_pemesanan as $pesanan)
+                                                        {{$pesanan->bakpao->jenis_bakpao}}
+                                                        <br>
+                                                    @endforeach
+
+                       </h5>
                       </td>
                       
                       <td>
-                        <h5 class="product-title font-alt">Rp. {{Auth::user()->penghasilan_bersih}}</h5>
+                        <h5 class="product-tittle font-alt">
+                                                    @foreach($transaksi->item_pemesanan as $pesanan)
+                                                        {{$pesanan->jumlah}}
+                                                        <br>
+                                                    @endforeach
+
+                       </h5>
                       </td>
                       
                       <td>
-                        <h5 class="product-title font-alt">Rp.750.000</h5>
+                        <h5 class="product-tittle font-alt">
+                                                    {{$transaksi->total_harga}}
+
+                       </h5>
                       </td>
-                      
+                         
                     </tr>
+                     @endforeach()
+
                 
                   </tbody>
                 </table>

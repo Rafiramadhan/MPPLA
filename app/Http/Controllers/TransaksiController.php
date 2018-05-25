@@ -61,6 +61,21 @@ class TransaksiController extends Controller
         return view('pages.admin.verifpenjual', $data);
 	}
 
+	public function getUserTransaction()
+	{
+		// $pemesanans = ItemPemesanan::whereHas('pemesanan',function ($q){
+		// 				   $q->where('status', '0');
+		// 				})->get();
+
+		$pemesanans = Pemesanan::where('user_id', Auth::user()->id)->get();
+
+
+		$data = [
+            'pemesanans' => $pemesanans
+        ];
+        return view('pages.penjual.hasiljual', $data);
+	}
+
 
 
 	public function declineTransaction($id)
