@@ -64,7 +64,8 @@ class BakpaoController extends Controller
                 'status_code' => 202,
                 'message' => "Bakpao berhasil diubah");
         }
-        return \Response::json($data, 202);
+        
+         return redirect('kelolabakpao');
     }
 
     public function getSpecificBakpao($id)

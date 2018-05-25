@@ -63,6 +63,8 @@ Route::post('createpenjual','UserController@createPenjual');
 Route::get('deletebakpao/{id}','BakpaoController@deleteBakpao');
 Route::get('formeditbakpao/{id}','BakpaoController@getSpecificBakpao');
 
+Route::post('editbakpao','BakpaoController@editBakpao');
+
 
 
 
