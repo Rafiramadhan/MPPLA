@@ -8,6 +8,7 @@ use App\Pemesanan;
 use App\User;
 use App\ItemPemesanan;
 use App\UserDetail;
+use Auth;
 
 
 class TransaksiController extends Controller
@@ -16,7 +17,6 @@ class TransaksiController extends Controller
 	public function addTransaction(Request $request)
 	{
 		//dd($request->jumlah);
-
 		$pemesanan = Pemesanan::create([
             'user_id' => $request['user_id'],
             'status' => 0,
@@ -27,7 +27,7 @@ class TransaksiController extends Controller
 
         foreach ($request->bakpao_id as $key => $bakpao) {
         	# 
-        	if($request->jumlah[$key] == null) continue;
+        	if($request->jumlah[$key] == 0) continue;
         	$data = [
 				"bakpao_id" => $request->bakpao_id[$key],
 				"jumlah" => $request->jumlah[$key],
@@ -41,7 +41,7 @@ class TransaksiController extends Controller
 			$bakpao->save();
         }
 
-		return $pemesanan;
+		return Redirect('indexadmin');
 
 		//return ItemPemesanan::create($item_transaksi);
 	}
@@ -101,10 +101,10 @@ class TransaksiController extends Controller
 		return Redirect('verifpenjual');
 	}
 
-	public function getUserHistoryTransaction(Request $request)
+	public function getUserHistoryTransaction()
 	{
-		$pemesanan = Pemesanan::where('user_id', '=', $request['user_id'])->get();
-		dd($pemesanan->item_pemesanan);
+		$pemesanan = Pemesanan::where('user_id', '=', Auth::User()->id)->get();
+		dd($pemesanan);
 	}
 
 	

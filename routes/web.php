@@ -55,7 +55,7 @@ Route::get('tes/getallhistory','AdminController@getAllTransaction');
 
 Route::post('tes/tambahtransaksi','TransaksiController@addTransaction');
 Route::post('tes/tolaktransaksi','TransaksiController@declineTransaction');
-Route::post('tes/historypenjual','TransaksiController@getUserHistoryTransaction');
+Route::get('tes/historypenjual','TransaksiController@getUserHistoryTransaction');
 
 Route::get('tes/createdummy','UserController@createUserDummy');
 
