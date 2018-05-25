@@ -59,7 +59,7 @@
                                        placeholder="Stok Bakpao"/>
                             </div>
                             <div>
-                                <input class="form-control input-sm" name="path_gambar" type="file" name="pic"
+                                <input class="form-control input-sm" name="path_gambar" type="file"
                                        accept="image/*"
                                        placeholder="Gambar Bakpao">
                             </div>
