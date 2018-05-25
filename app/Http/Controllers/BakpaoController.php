@@ -11,6 +11,10 @@ class BakpaoController extends Controller
 
     public function createBakpao(Request $request)
     {
+        $foto = $request['path_gambar'];
+        $foto->move('images', $foto->getClientOriginalName());
+
+
         if (Bakpao::where('jenis_bakpao', '=', $request['jenis_bakpao'])->count() > 0) {
             $data = array(
                 'data' => null,
@@ -21,8 +25,8 @@ class BakpaoController extends Controller
             $bakpao = Bakpao::create([
                 'jenis_bakpao' => $request['jenis_bakpao'],
                 'harga_bakpao' => $request['harga_bakpao'],
-                'path_gambar' => $request['path_gambar'],
-                'stok_bakpao' => $request['stok_bakpao']
+                'path_gambar' => $foto->getClientOriginalName(),
+            'stok_bakpao' => $request['stok_bakpao']
             ]);
             $data = array(
                 'data' => null,

@@ -33,6 +33,7 @@ Route::get('/pemesanan','BakpaoController@getBakpao');
 Route::get('/penjualan','HomeController@getPenjualan');
 Route::get('/tentang','HomeController@getTentang');
 Route::get('/temppemesanan', 'HomeController@getTempPemesanan');
+Route::get('/tambahpenjual', 'HomeController@getTambahPenjual');
 
 
 Route::post('tambahkritik','UserController@addKritikSaran');

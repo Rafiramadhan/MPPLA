@@ -35,7 +35,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3">
-                        <h1 class="module-title font-alt mb-0">Tambah Varian Bakpao Baru</h1>
+                        <h1 class="module-title font-alt mb-0">Tambah Penjual Baru</h1>
                     </div>
                 </div>
             </div>
@@ -45,26 +45,35 @@
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
                         <hr class="divider-w mt-10 mb-20">
-                        <form action="/tes/tambahbakpao" method="post" enctype="multipart/form-data">
+                        <form class="form" action="/register" method="post">
                             @csrf
                             <div class="form-group">
-                                <input class="form-control input-lg" name="jenis_bakpao" type="text"
-                                       placeholder="Jenis Bakpao"/>
+                                <input class="form-control" id="E-mail" type="text" name="email" placeholder="Email"/>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" name="harga_bakpao" placeholder="Harga Bakpao"/>
+                                <input class="form-control" id="identitas" type="text" name="kontak"
+                                       placeholder="Kontak"/>
                             </div>
                             <div class="form-group">
-                                <input class="form-control input-sm" name="stok_bakpao" type="text"
-                                       placeholder="Stok Bakpao"/>
+                                <input class="form-control" id="username" type="text" name="nama"
+                                       placeholder="Nama"/>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="password" type="password" name="password"
+                                       placeholder="Password"/>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="re-password" type="password" name="password_confirmation"
+                                       placeholder="Ulang Password"/>
                             </div>
                             <div>
-                                <input class="form-control input-sm" name="path_gambar" type="file" accept="image/*"
-                                       placeholder="Gambar Bakpao">
+                                <select name="role" id="role" placeholder="Tambah Sebagai" style="margin-bottom: 20px">
+                                    <option value="penjual">Penjual</option>
+                                    <option value="Admin">Admin</option>
+                                </select>
                             </div>
-                            <br>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-block btn-round btn-b">Pesan</button>
+                                <button type="submit" class="btn btn-block btn-round btn-b">Daftar</button>
                             </div>
                         </form>
                     </div>
