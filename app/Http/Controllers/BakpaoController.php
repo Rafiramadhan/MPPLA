@@ -79,15 +79,16 @@ class BakpaoController extends Controller
             return view('pages.penjual.pemesanan', $data);
     }
 
-    public function deleteBakpao(Request $request)
+    public function deleteBakpao($id)
     {
 
-        $bakpao = Bakpao::where('jenis_bakpao', '=', $request['jenis_bakpao'])->delete();
+        $bakpao = Bakpao::where('id', '=', $id)->delete();
         $data = array(
             'data' => null,
             'status_code' => 202,
             'message' => "telah dihapus");
 
+        return Redirect('kelolabakpao')
         return \Response::json($data, 202);
     }
 

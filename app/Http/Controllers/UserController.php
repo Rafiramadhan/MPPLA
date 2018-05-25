@@ -84,4 +84,25 @@ class UserController extends Controller
 		return redirect('/indexadmin');
 	}
 
+	public function createPenjual(Request $request)
+	{
+		$user = User::create([
+			'nama' => $request['nama'],
+            'kontak' => $request['kontak'],
+            'password' => bcrypt($request['password']),
+            'email' => $request['email'],
+            'role' => 'Penjual'
+			]);
+
+		$user_detail = UserDetail::create([
+			'user_id' => $user->id,
+            'alamat' => $request['alamat'],
+            // 'penghasilan_bersih' => $request['penghasilan_bersih'],
+            // 'penghasilan_kotor' => $request['penghasilan_kotor'],
+            'admin_id' => Auth::User()->id
+			]);
+		return Redirect('indexadmin');
+	}
+
+
 }

@@ -45,7 +45,7 @@
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
                         <hr class="divider-w mt-10 mb-20">
-                        <form class="form" action="/register" method="post">
+                        <form class="form" action="/createpenjual" method="post">
                             @csrf
                             <div class="form-group">
                                 <input class="form-control" id="E-mail" type="text" name="email" placeholder="Email"/>
@@ -57,6 +57,10 @@
                             <div class="form-group">
                                 <input class="form-control" id="username" type="text" name="nama"
                                        placeholder="Nama"/>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="username" type="text" name="alamat"
+                                       placeholder="Alamat"/>
                             </div>
                             <div class="form-group">
                                 <input class="form-control" id="password" type="password" name="password"
