@@ -88,7 +88,7 @@ class BakpaoController extends Controller
             'status_code' => 202,
             'message' => "telah dihapus");
 
-        return Redirect('kelolabakpao')
+        return Redirect('kelolabakpao');
         return \Response::json($data, 202);
     }
 

@@ -67,7 +67,7 @@
                                             </td>
                                             <input type="hidden" name="bakpao_id[]" value="{{$bakpao->id}}">
                                             <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
-                                            <td class="pr-remove"><a href="#" title="Remove"><i class="fa fa-times"></i></a>
+                                            <td class="pr-remove"><a href="deletebakpao/{{$bakpao->id}}" title="Remove"><i class="fa fa-times"></i></a>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -132,6 +132,15 @@
                 $(this).val($(this).val().replace(/(,| )/g, '').addComma());
             })
         }
+        var marker = new google.maps.Marker({
+                    position: mkr,
+                    icon: image,
+                    title: 'Penjual X',
+                    infoWindow: {
+                        content: '<p><strong>X</strong><br/>Jln Keputih<br/>P: (+628) 56-8765-9876</p>'
+                    },
+                    map: map,
+                });
 
     </script>
 @endsection
