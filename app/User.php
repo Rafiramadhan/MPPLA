@@ -17,7 +17,7 @@ class User extends Authenticatable
   	}
   	public function user_detail()
   	{
-  		return $this->hasOne('App\UserDetail', 'id', ' user_id');
+  		return $this->hasMany('App\UserDetail', 'id', ' user_id');
   	}
   	public function location()
   	{

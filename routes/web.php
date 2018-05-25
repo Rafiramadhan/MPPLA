@@ -86,3 +86,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('home');
+
+Route::get('/history', 'TransaksiController@getUserTransaction');
+
+
+
