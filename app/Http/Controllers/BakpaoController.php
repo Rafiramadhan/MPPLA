@@ -74,7 +74,8 @@ class BakpaoController extends Controller
             'bakpaos' => $bakpao
         ];
         //masukin nama bladenya
-        return view('pages.admin.kelolabakpao', $data);
+
+        return view('pages.admin.editbakpao', $data);
         
     }
 

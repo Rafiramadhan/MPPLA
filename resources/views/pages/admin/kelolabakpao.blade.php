@@ -57,7 +57,7 @@
                                             <td class="hidden-xs"><a href="#"><img src="assets/images/shop/{{$bakpao->path_gambar}}"
                                                                                    alt="Accessories Pack"/></a></td>
                                             <td>
-                                                <h5 class="product-title font-alt">{{$bakpao->jenis_bakpao}}</h5>
+                                                <h5 class="product-title font-alt"><a href="formeditbakpao/{{$bakpao->id}}">{{$bakpao->jenis_bakpao}}</a></h5>
                                             </td>
                                             <td class="hidden-xs">
                                                 <h5 class="product-title font-alt">Rp.{{$bakpao->harga_bakpao}}</h5>
